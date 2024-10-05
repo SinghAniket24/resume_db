@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qualifications - Aniket H. Singh</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+
+body{
+            background-color: #1b0637;
+        }
+
+  /* Navigation Bar */
+  nav {
+            background-color: #0077b6;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .nav-name {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-left: 20px;
+    background: linear-gradient(135deg, #ff007f, #ff4f4f, #ff7f00, #ffaf00, #00ff15);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    animation: fadeIn 1.5s ease-out;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5), 2px 2px 0 rgba(0, 0, 0, 0.4), 3px 3px 0 rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.5px;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.nav-name:hover {
+    transform: scale(1.2);
+}
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin: 0 20px;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            padding-bottom: 5px;
+        }
+
+        nav a:hover {
+            color: aqua;
+        }
+
+        nav a.active {
+            color: #1b0768;
+            border-bottom: 2px solid #caf0f8;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+        /* Fade-in animation for navigation */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Slide-in animation for sections */
+        .slide-down {
+            opacity: 0;
+            transform: translateY(-30px);
+            animation: slideDown 1.5s forwards;
+        }
+
+        @keyframes slideDown {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Card container layout */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Card styling */
+        .card {
+            background-color: #073d6d;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 2s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: slideInUp 0.6s forwards;
+        }
+
+        /* Sequential delay for each card */
+        .card:nth-child(1) {
+            animation-delay: 0.3s;
+        }
+
+        .card:nth-child(2) {
+            animation-delay: 0.6s;
+        }
+
+        .card:nth-child(3) {
+            animation-delay: 0.9s;
+        }
+
+        /* Slide-up animation */
+        @keyframes slideInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card h3 {
+            margin: 10px 0;
+            font-size: 1.5em;
+            color: #ecf0f1;
+            text-decoration: underline;
+        }
+
+        .card p {
+            font-size: 1em;
+            color: #bdc3c7;
+        }
+
+        .card .highlight {
+            color: #1abc9c;
+            font-weight: bold;
+        }
+
+        /* Gradient hover effect with different colors */
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 30px 20px 20px rgba(119, 27, 231, 0.4);
+            background: linear-gradient(135deg, rgba(28, 8, 240, 0.8), rgba(237, 102, 115, 0.762));
+        }
+
+        /* Keep text color unchanged on hover */
+        .card:hover h3,
+        .card:hover p,
+        .card:hover .highlight {
+            color: #ecf0f1;
+        }
+
+        .main-content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Section styling */
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 2em;
+            color: #0077b6;
+            margin-bottom: 20px;
+        }
+
+        .card-icon {
+            font-size: 2em;
+            color: #45adc7;
+            margin-bottom: 15px;
+        }
+
+        /* Progress bar styling */
+        .skill-bar {
+            margin-top: 10px;
+            
+            position: relative;
+        }
+
+        .progress-bar {
+            background-color: #ddd;
+            border-radius: 10px;
+            width: 100%;
+            height: 15px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress {
+            height: 100%;
+            background-color: #1abc9c;
+            border-radius: 10px;
+            transition: width 2s ease, background-color 0.5s ease;
+        }
+
+        /* Specific skill widths */
+        .python {
+            width: 90%;
+        }
+
+        .cpp {
+            width: 80%;
+        }
+
+        .r {
+            width: 70%;
+        }
+
+        .html {
+            width: 85%;
+        }
+
+        .java {
+            width: 60%;
+        }
+
+        .sql {
+            width: 75%;
+        }
+
+        .excel {
+            width: 80%;
+        }
+
+        .canva {
+            width: 70%;
+        }
+        .css {
+    width: 80%;
+}
+
+.js {
+    width: 75%;
+}
+
+.jquery {
+    width: 70%;
+}
+
+
+        /* Tooltip styling for percentages */
+        .percentage {
+            position: absolute;
+            right: 10px;
+            top: 0;
+            color: #01050c;
+            font-size: 0.85em;
+            display: block; /* Ensure it's always displayed */
+        }
+
+        /* Glow effect on hover for progress bars */
+        .progress-bar:hover .progress {
+            background-color: #2ecc71;
+            box-shadow: 0 0 15px rgba(46, 204, 113, 0.8);
+        }
+
+        /* Image styling */
+        .institute-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover; 
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav {
+        padding: 10px;
+    }
+
+    nav a {
+        font-size: 1em;
+        margin: 0 10px;
+    }
+
+    .card {
+        width: 100%; 
+        padding: 15px;
+    }
+
+    .section h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        font-size: 0.9em;
+    }
+
+    .card h3 {
+        font-size: 1.2em;
+    }
+
+    .card-icon {
+        font-size: 1.5em;
+    }
+
+    .institute-image {
+        height: 120px; 
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-name">Aniket H. Singh</div>
+        <div>
+            <a href="resume.html" >My Profile</a>
+            <a href="personal.html">About Me</a>
+            <a href="qualifications.html" class="active" >Education & Skills</a>
+            <a href="c.html"  >Projects</a>
+            <a href="form_resume.html">Contact Me</a>
+        </div>
+    </nav>
+
+    
+
+    <br><br>
+
+    <div class="main-content">
+        <section class="section qualification-section">
+            <h2 class="slide-down">Education</h2>
+            <div class="card-container">
+                <div class="card">
+                    
+                    <i class="fa-solid fa-graduation-cap card-icon"></i>
+                    <h3>FYBSCIT</h3>
+                    <img src="xaviers.jpg" alt="St. Xavier's College" class="institute-image">
+                    <p class="highlight"><a href="https://maps.app.goo.gl/7xp3AmKSvWbucqaf9" target="_blank">St. Xavier's College, Mumbai</a></p>
+                </div>
+                <div class="card">
+                   
+                    <i class="fa-solid fa-book card-icon"></i>
+                    <h3>12th Grade (75%)</h3>
+                    <img src="rkt.jpeg" alt="R.K.T. College" class="institute-image">
+                    <p class="highlight"><a href="https://maps.app.goo.gl/ektQBTLi41D4smCfA" target="_blank">R.K.T. College, Ulhasnagar</a></p>
+                </div>
+                <div class="card">
+                    
+                    <i class="fa-solid fa-school card-icon"></i>
+                    <h3>10th Grade (87.74%)</h3>
+                    <img src="sices.jpeg" alt="S.I.C.E.S. High School" class="institute-image">
+                    <p class="highlight"><a href="https://maps.app.goo.gl/Bk3Fd35B5vFAVYiE8" target="_blank">S.I.C.E.S. High School, Ambernath</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section skills-section">
+            <h2 class="slide-down">Skills</h2>
+            <div class="card-container">
+                <div class="card">
+                    <i class="fa-solid fa-code card-icon"></i>
+                    <h3>Programming Languages</h3>
+                    <p class="highlight">Python, C++, R, Java</p>
+                    <div class="skill-bar">
+                        <p>Python</p>
+                        <div class="progress-bar">
+                            <div class="progress python"></div>
+                            <div class="percentage">90%</div>
+                        </div>
+                        <p>C++</p>
+                        <div class="progress-bar">
+                            <div class="progress cpp"></div>
+                            <div class="percentage">80%</div>
+                        </div>
+                        <p>R</p>
+                        <div class="progress-bar">
+                            <div class="progress r"></div>
+                            <div class="percentage">70%</div>
+                        </div>
+                        <p>Java</p>
+                        <div class="progress-bar">
+                            <div class="progress java"></div>
+                            <div class="percentage">60%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-laptop-code card-icon"></i>
+                    <h3>Web Development</h3>
+                    <p class="highlight">HTML, CSS, JavaScript, jQuery</p>
+                    <div class="skill-bar">
+                        <p>HTML</p>
+                        <div class="progress-bar">
+                            <div class="progress html"></div>
+                            <div class="percentage">85%</div>
+                        </div>
+                        <p>CSS</p>
+                        <div class="progress-bar">
+                            <div class="progress css"></div>
+                            <div class="percentage">80%</div>
+                        </div>
+                        <p>JavaScript</p>
+                        <div class="progress-bar">
+                            <div class="progress js"></div>
+                            <div class="percentage">75%</div>
+                        </div>
+                        <p>jQuery</p>
+                        <div class="progress-bar">
+                            <div class="progress jquery"></div>
+                            <div class="percentage">70%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-database card-icon"></i>
+                    <h3>Database Management</h3>
+                    <p class="highlight">SQL</p>
+                    <div class="skill-bar">
+                        <p>SQL</p>
+                        <div class="progress-bar">
+                            <div class="progress sql"></div>
+                            <div class="percentage">75%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-chart-bar card-icon"></i>
+                    <h3>Other Skills</h3>
+                    <p class="highlight">Excel, Canva</p>
+                    <div class="skill-bar">
+                        <p>Excel</p>
+                        <div class="progress-bar">
+                            <div class="progress excel"></div>
+                            <div class="percentage">80%</div>
+                        </div>
+                        <p>Canva</p>
+                        <div class="progress-bar">
+                            <div class="progress canva"></div>
+                            <div class="percentage">70%</div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </section>
+        
+        
+        
+        
+
+    </div>
+    
+</body>
+
+</html>

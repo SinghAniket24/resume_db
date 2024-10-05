@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Advanced Newspaper Webpage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        h1 {
+            color: blue;
+            background-color: burlywood;
+            text-align: center;
+            border: 5px solid black;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .Newspaper {
+            column-count: 4;
+            column-gap: 20px;
+            width: 100%;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+        .article {
+            break-inside: avoid;
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 4px solid #ccc;
+            border-radius: 5px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background-color: bisque;
+            position: relative;
+        }
+        .article:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            background-color: aliceblue;
+        }
+        .body {
+            background-color: burlywood;
+        }
+        .details {
+            display: none; 
+            transition: max-height 0.3s ease-out;
+        }
+        p {
+            background-color: #f9d5d3; 
+            border: 4px solid black;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            border: 6px solid black;
+            margin-bottom: 15px;
+            border-radius: 10%;
+            transition: transform 0.3s;
+        }
+        img:hover {
+            transform: scale(1.02);
+        }
+        h3 {
+            color: brown;
+            text-align: right;
+            text-decoration: underline;
+        }
+        .subscribe-btn {
+            margin-left: 10px;
+            transition: background-color 0.3s, opacity 0.3s;
+        }
+        .subscribe-btn:hover {
+            background-color: #0056b3; 
+            opacity: 0.9; 
+        }
+        .back-button {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #076cf0;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #1e06f1;
+        }
+        @media (min-width: 576px) {
+            .Newspaper {
+                column-count: 2;
+            }
+        }
+        @media (min-width: 768px) {
+            .Newspaper {
+                column-count: 3;
+            }
+        }
+        @media (min-width: 992px) {
+            .Newspaper {
+                column-count: 4;
+            }
+        }
+        .container {
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .subscribe-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body class="body">
+    <script>
+        $(document).ready(function() {
+            $('.article').on('click', function() {
+                $(this).find('.details').slideToggle(300);
+            });
+        });
+    </script>
+
+    <a href="c.html" class="back-button">Back to Resume</a>
+    
+    <div class="container">
+        <div class="subscribe-container">
+            <h3>12-08-2004</h3>
+            <button class="btn btn-primary subscribe-btn">Subscribe</button>
+        </div>
+        <h1 class="text-center my-4">Times of India</h1>
+       
+        <div class="Newspaper">
+            <div class="article">
+                <img src="imgs/ParisOlympics.jpg" alt="Paris Olympics">
+                <h4>Article 1: Paris Olympics: Six medals and six near misses; India finishes 71st in medal tally</h4>
+                <div class="details">
+                    <p>Neeraj Chopra, Manu Bhaker, Sarabjot Singh, Swapnil Kusale, Aman Sehrawat and the Indian hockey team contributed to six medals, including a silver and five bronze, and gave reasons to celebrate. India managed the 71st place in the medals tally.</p>
+                </div>
+            </div>
+            
+            <div class="article">
+                <img src="imgs/second.avif" alt="Hindenburg Research Report">
+                <h4>Article 2: Hindenburg Research Report Highlights: SEBI advises caution on Hindenburg report</h4>
+                <div class="details">
+                    <p>Hindenburg Research released a report alleging market watchdog SEBI chairperson Madhabi Buch's involvement in Adani Group's offshore funds, which were allegedly used in a "money siphoning scandal."</p>
+                </div>
+            </div>
+
+            <div class="article">
+                <img src="imgs/third.avif" alt="Financial strain of disability">
+                <h4>Article 3: Financial strain of disability in India high, insurance aims to bridge gap</h4>
+                <div class="details">
+                    <p>Many Indians face financial hardship due to disability. Insurance companies are stepping forward with innovative solutions to address this critical gap in financial security.</p>
+                </div>
+            </div>
+
+            <div class="article">
+                <img src="imgs/1723307987-8425.webp" alt="Maldives as a key ally">
+                <h4>Article 4: Maldives a key ally of India in Indian Ocean region, says EAM Jaishankar</h4>
+                <div class="details">
+                    <p>The Maldives is a key partner for India in the Indian Ocean region. Jaishankar's remarks came during the inauguration of projects facilitated by the Government of India.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

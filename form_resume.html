@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form - Aniket H. Singh</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #051a66, #054c5a, #d8e0e8);
+            color: #fff;
+            margin-top: 0;
+            animation: fadeIn 1s ease forwards;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #0077b6;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .nav-name {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-left: 20px;
+            background: linear-gradient(135deg, #ff007f, #ff4f4f, #ff7f00, #ffaf00, #00ff15);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            animation: fadeIn 1.5s ease-out;
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5), 2px 2px 0 rgba(0, 0, 0, 0.4), 3px 3px 0 rgba(0, 0, 0, 0.3);
+            letter-spacing: 0.5px;
+            transform: scale(1);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-name:hover {
+            transform: scale(1.2);
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin: 0 20px;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            padding-bottom: 5px;
+        }
+
+        nav a:hover {
+            color: aqua;
+        }
+
+        nav a.active {
+            color: #1b0768;
+            border-bottom: 2px solid #caf0f8;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 500px;
+            background: rgba(26, 27, 27, 0.31);
+            padding: 20px;
+            border-radius: 20px;
+            margin: 60px auto;
+            margin-bottom: 2px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.5s ease forwards;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 24px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #fff;
+            font-size: 20px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px 15px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: #fff;
+            color: #333;
+            box-shadow: inset 0 2px 4px rgba(44, 10, 216, 0.5);
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #b1cdf3;
+            color: #1b0637;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button:hover {
+            color: #fff;
+            background-color: #0077b6;
+            transform: scale(1.05);
+        }
+
+        button i {
+            margin-right: 8px;
+        }
+
+     .contact-info {
+        margin-top:0;
+        text-align: center;
+        font-size: 18px;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .contact-info a {
+        color: #d2cbdb;
+        text-decoration: underline;
+        transition: color 0.3s;
+    }
+
+    .contact-info a:hover {
+        color: rgb(168, 168, 247);
+        text-shadow: 5px 5px 5px #1b0768;
+    }
+
+
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 10px;
+            }
+
+            nav a {
+                font-size: 1em;
+                margin: 0 10px;
+            }
+
+            .form-container {
+                width: 90%;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            label {
+                font-size: 18px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="date"],
+            textarea,
+            select {
+                font-size: 14px;
+            }
+
+            button {
+                font-size: 14px;
+            }
+
+            .contact-info {
+                font-size: 16px;
+            }
+
+            .social-links a {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav a {
+                font-size: 0.9em;
+            }
+
+            h1 {
+                font-size: 18px;
+            }
+
+            label {
+                font-size: 16px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="date"],
+            textarea,
+            select {
+                font-size: 12px;
+            }
+
+            button {
+                font-size: 12px;
+            }
+
+            .contact-info {
+                font-size: 14px;
+            }
+
+            .social-links a {
+                font-size: 18px;
+            }
+        }
+
+        .error {
+            color: #ff6b6b;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-name">Aniket H. Singh</div>
+        <div>
+            <a href="resume.html">My Profile</a>
+            <a href="personal.html">About Me</a>
+            <a href="qualifications.html">Education & Skills</a>
+            <a href="c.html">Projects</a>
+            <a href="form_resume.html" class="active">Contact Me</a>
+        </div>
+    </nav>
+
+    <br><br><br><br>
+
+    <div class="form-container">
+        <h1>Contact Me</h1>
+        <form id="contactForm" action="contact.php" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <span class="error" id="nameError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="textDate">Virtual Meet Date:</label>
+                <input type="date" id="textDate" name="meet_date" required>
+                <span class="error" id="dateError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="preferred_time">Preferred Time:</label>
+                <select id="preferred_time" name="preferred_time" required>
+                    <option value="">Select Time</option>
+                    <option value="9">9:00 AM</option>
+                    <option value="10">10:00 AM</option>
+                    <option value="11">11:00 AM</option>
+                    <option value="12:00">12:00 PM</option>
+                    <option value="13">1:00 PM</option>
+                    <option value="14">2:00 PM</option>
+                    <option value="15">3:00 PM</option>
+                    <option value="16">4:00 PM</option>
+                </select>
+                <span class="error" id="preferredTimeError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <span class="error" id="messageError"></span>
+            </div>
+
+            <button type="submit">
+                <i class="fas fa-paper-plane"></i> Submit
+            </button>
+        </form>
+    </div>
+
+    <div class="contact-info">
+        <p>Phone: <a href="tel:9322791806" >9322791806</a></p>
+        <p>Email: <a href="mailto:aniket.singh.st1@gmail.com" >aniket.singh.st1@gmail.com</a></p>
+    </div>
+
+    <script>
+        document.querySelector("form").addEventListener("submit", function (event) {
+            event.preventDefault();
+    
+            const nameField = document.getElementById("name");
+            const emailField = document.getElementById("email");
+            const dateField = document.getElementById("textDate");
+            const timeField = document.getElementById("preferred_time"); // Corrected to match the ID in your HTML
+            const messageField = document.getElementById("message");
+    
+            document.getElementById("nameError").textContent = "";
+            document.getElementById("emailError").textContent = "";
+            document.getElementById("dateError").textContent = "";
+            document.getElementById("preferredTimeError").textContent = ""; // Added error for preferred time
+            document.getElementById("messageError").textContent = ""; // Added error for message
+    
+            // Regex patterns
+            const emailPattern = /^[a-zA-Z][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            const namePattern = /^[A-Za-z\s]+$/;
+    
+            let isValid = true;
+    
+            // Validate name
+            if (nameField.value && !namePattern.test(nameField.value)) {
+                document.getElementById("nameError").textContent = "Name must only contain letters and spaces.";
+                isValid = false;
+            }
+    
+            // Validate email
+            if (emailField.value && !emailPattern.test(emailField.value)) {
+                document.getElementById("emailError").textContent = "Please enter a valid email address.";
+                isValid = false;
+            }
+    
+            // Validate date
+            const selectedDate = new Date(dateField.value);
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            if (dateField.value && selectedDate < today) {
+                document.getElementById("dateError").textContent = "Please select today or a future date.";
+                isValid = false;
+            }
+    
+            // Validate preferred time
+            if (timeField.value === "") {
+                document.getElementById("preferredTimeError").textContent = "Please select a preferred time.";
+                isValid = false;
+            }
+    
+            // Validate message
+            if (messageField.value === "") {
+                document.getElementById("messageError").textContent = "Please enter a message.";
+                isValid = false;
+            }
+    
+            if (isValid) {
+                this.submit();
+            }
+        });
+    </script>
+    
+    
+</body>
+
+</html>

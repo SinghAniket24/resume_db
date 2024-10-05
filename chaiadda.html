@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arya's Chai Adda</title>
+    <style>
+        body {
+            background-color: burlywood;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            padding: 20px;
+            background-color: blanchedalmond;
+            border: 2px solid black;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        p {
+            color: brown;
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        ul {
+            text-align: center;
+            background-color: red;
+            font-size: large;
+            padding: 15px;
+            border-radius: 10px;
+            list-style-type: none;
+        }
+        ul li {
+            margin: 5px 0;
+            transition: color 0.3s;
+        }
+        ul li:hover {
+            color: white;
+        }
+        .container {
+            background-color: azure;
+            margin: 0 auto;
+            max-width: 800px; /* Adjusted width */
+            border: 2px solid black;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #076cf0;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #1e06f1;
+            transform: scale(1.05);
+        }
+        .error {
+            color: red;
+            font-size: larger;
+            visibility: hidden;
+        }
+        .result {
+            text-align: center;
+            background-color: beige;
+            color: blue;
+            font-family: monospace;
+            font-size: 2em;
+            visibility: hidden;
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            display: block;
+            margin: 0 auto;
+            max-width: 200px;
+            border: 10px solid brown;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .back-button {
+            display: inline-block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #076cf0;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-align: center;
+        }
+        .back-button:hover {
+            background-color: #1e06f1;
+            transform: scale(1.05);
+        }
+        #orderSummary {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e0f7fa;
+            border-radius: 5px;
+            display: none;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+        #orderSummary:hover {
+            background-color: #b2ebf2;
+        }
+    </style>
+</head>
+<body>
+    <a href="c.html" class="back-button">Back to Resume</a>
+    
+    <div class="container">
+        <h1>Arya's Chai Adda</h1>
+        <img src="cafe.png" alt="Arya's Chai Adda Logo" class="logo">
+        <marquee><u>Special discounts for IT majors and minors</u></marquee>
+        <ul>
+            <li>Tea: Rs 10</li>
+            <li>Coffee: Rs 15</li>
+            <li>Milk: Rs 5</li>
+        </ul>
+        <p>Please place your order here!</p>
+        <form id="orderForm" method="get">
+            <label for="tea">Number of cups of tea:</label>
+            <input type="number" id="tea" name="tea" min="0" placeholder="Enter no of tea cups">
+            <br><br>
+            <label for="coffee">Number of cups of coffee:</label>
+            <input type="number" id="coffee" name="coffee" min="0" placeholder="Enter no of coffee cups">
+            <br><br>
+            <label for="milk">Number of cups of milk:</label>
+            <input type="number" id="milk" name="milk" min="0" placeholder="Enter no of milk cups">
+            <br><br>
+            <small id="error" class="error">Error</small>
+            <br>
+            <label for="dept">Do you belong to the IT department?</label>
+            <select id="dept" name="dept">
+                <option value="none">Other (no discount)</option>
+                <option value="it_major">IT Major (5% Discount)</option>
+                <option value="it_minor">IT Minor (2% Discount)</option>
+            </select>
+            <br><br>
+            <button type="button" class="button" onclick="calculate_amt()">Place Order</button>
+            <br><br>
+            <span id="result" class="result">Bill Amount</span>
+            <div id="orderSummary"></div>
+            <h4 style="text-align: center;">Thank you for being here!</h4>
+        </form>  
+        <script>
+            function calculate_amt() {
+                const tea_price = 10;
+                const coffee_price = 15;
+                const milk_price = 5;
+
+                const Tcups = parseInt(document.getElementById("tea").value) || 0;
+                const Ccups = parseInt(document.getElementById("coffee").value) || 0;
+                const Mcups = parseInt(document.getElementById("milk").value) || 0;
+
+                const dept = document.getElementById("dept").value;
+                let discount = 0;
+                if (dept === "it_major") {
+                    discount = 0.05;
+                } else if (dept === "it_minor") {
+                    discount = 0.02;
+                }
+
+                let bill_amt = (Tcups * tea_price) + (Ccups * coffee_price) + (Mcups * milk_price);
+                bill_amt = bill_amt - (bill_amt * discount);
+
+                const error_message = document.getElementById("error");
+                const Bill = document.getElementById("result");
+                const orderSummary = document.getElementById("orderSummary");
+
+                if (Tcups < 0 || Ccups < 0 || Mcups < 0) {
+                    error_message.textContent = "Please enter valid number of cups.";
+                    error_message.style.visibility = 'visible';
+                    Bill.style.visibility = 'hidden';
+                    orderSummary.style.display = 'none';
+                } else {
+                    error_message.style.visibility = 'hidden';
+                    Bill.textContent = "Your bill amount is: Rs " + bill_amt.toFixed(2);
+                    Bill.style.visibility = 'visible';
+                    orderSummary.innerHTML = `
+                        <strong>Order Summary:</strong>
+                        <p>Tea: ${Tcups} cups</p>
+                        <p>Coffee: ${Ccups} cups</p>
+                        <p>Milk: ${Mcups} cups</p>
+                        <p>Discount: ${(discount * 100).toFixed(0)}%</p>
+                        <p>Total: Rs ${bill_amt.toFixed(2)}</p>
+                    `;
+                    orderSummary.style.display = 'block';
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
