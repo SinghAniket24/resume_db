@@ -7,7 +7,7 @@
     <title>Resume - Aniket H. Singh</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* General Styling */
+  
         body {
             font-family: Arial, sans-serif;
             background-color: #1b0637;
@@ -16,7 +16,6 @@
             padding: 0;
         }
 
-        /* Container for Profile Section */
         .container {
             display: flex;
             align-items: center;
@@ -29,7 +28,7 @@
             animation: slideIn 0.5s forwards;
         }
 
-        /* Keyframes for Container Animation */
+ 
         @keyframes slideIn {
             to {
                 opacity: 1;
@@ -61,7 +60,7 @@
             background-clip: text;
             color: transparent;
             animation: fadeIn 1.5s ease-out;
-            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5), 2px 2px 0 rgba(0, 0, 0, 0.4), 3px 3px 0 rgba(0, 0, 0, 0.3);
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
             letter-spacing: 0.5px;
             transform: scale(1);
             transition: transform 0.3s ease;
@@ -94,26 +93,25 @@
 }
 
 #rate-resume-button {
-    background-color: #00bfff; /* Bright blue color */
-    color: #fff; /* White text */
-    font-size: 1.2em; /* Font size */
-    padding: 10px 20px; /* Padding */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    background-color: #00bfff; 
+    color: #fff; 
+    font-size: 1.2em; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
 }
 
 #rate-resume-button:hover {
-    background-color: #0077b6; /* Darker blue on hover */
-    transform: translateY(-2px); /* Slight lift effect */
+    background-color: #0077b6; 
+    transform: translateY(-2px);
 }
 
 #rate-resume-button:active {
-    transform: translateY(0); /* Return to original position on click */
-}
+    transform: translateY(0);}
 
-        /* Keyframes for Navigation Bar Animation */
+       
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -126,7 +124,7 @@
             }
         }
 
-        /* Profile Image Styling */
+
         .profile-image {
             border-radius: 50%;
             width: 450px;
@@ -147,7 +145,7 @@
             transform: scale(1.1);
         }
 
-        /* Keyframes for Profile Image Animation */
+     
         @keyframes slideInImage {
             from {
                 opacity: 0;
@@ -160,7 +158,6 @@
             }
         }
 
-        /* Text Styling for Profile Section */
         .content {
             max-width: 700px;
         }
@@ -179,6 +176,7 @@
         }
 
         p {
+            text-align: justify;
             font-size: 1.3em;
             margin: 15px 0 40px;
             color: #ddd;
@@ -223,7 +221,7 @@
             text-shadow: 0 0 20px currentColor, 0 0 30px currentColor, 0 0 40px currentColor;
         }
 
-        /* Iframe Container Styling */
+     
         .iframe-container {
     display: none;
     position: fixed;
@@ -262,8 +260,7 @@
             }
 
             .profile-image {
-                width: 350px;
-                height: 350px;
+                visibility: hidden;
             }
 
             h1 {
@@ -277,16 +274,23 @@
             p {
                 font-size: 1.1em;
             }
+            .nav-name{
+            
+            }
+            .iframe-container {
+        width: 90%; 
+        height: 40%; 
+    }
         }
 
         @media screen and (max-width: 768px) {
             nav a {
                 font-size: 1em;
+                margin: 0 10px;
             }
 
             .profile-image {
-                width: 250px;
-                height: 250px;
+              visibility: hidden;
             }
 
             h1 {
@@ -300,6 +304,13 @@
             p {
                 font-size: 1em;
             }
+            .nav-name{
+                display: none;
+            }
+            .iframe-container {
+        width: 90%; 
+        height: 40%;
+    }
         }
     </style>
 </head>
@@ -309,7 +320,7 @@
     <nav>
         <div class="nav-name">Aniket H. Singh</div>
         <div>
-            <a href="index.html" class="active">My Profile</a>
+            <a href="resume.html" class="active">My Profile</a>
             <a href="personal.html">About Me</a>
             <a href="qualifications.html">Education & Skills</a>
             <a href="c.html">Projects</a>
@@ -318,11 +329,8 @@
     </nav>
 
     <!-- Profile Section -->
-
     <div class="container">
-    
-   
-    <div class="content">
+        <div class="content">
             <h1 id="typed-text"></h1>
             <h2>"Web Developer & Data Analyst"</h2>
             <p>I'm passionate about building dynamic, user-friendly websites and leveraging data for impactful insights. With skills in Python, C++, R, HTML, Java, and SQL, I enjoy turning ideas into real-life digital experiences while applying data analysis to enhance decision-making.</p>
@@ -330,20 +338,24 @@
             <!-- Social Media Icons -->
             <div class="social-media">
                 <a href="https://twitter.com/" class="twitter" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/" class="linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/" class="github" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.instagram.com/" class="instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/aniket-singh-489127280" class="linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/SinghAniket24" class="github" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/singh_aniket_24/" class="instagram" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
 
             <!-- Rate My Resume Section -->
             <div class="rate-my-resume">
-                <button>Rate My Resume</button>
+                <button id="rate-resume-button" onclick="openIframe()">Rate My Resume</button>
             </div>
-         </div>
+        </div>
         <img src="pp.jpeg" alt="Profile Image" class="profile-image">
     </div>
+
     <!-- Iframe for Rate My Resume -->
-   
+    <div class="iframe-container" id="iframe-container">
+        <span class="close-icon" onclick="closeIframe()">&times;</span>
+        <iframe src="ratings.php" title="Rate My Resume"></iframe>
+    </div>
 
     <script>
         function openIframe() {
