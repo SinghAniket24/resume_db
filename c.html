@@ -49,7 +49,7 @@
             background-clip: text;
             color: transparent;
             animation: fadeIn 1.5s ease-out;
-            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5), 2px 2px 0 rgba(0, 0, 0, 0.4), 3px 3px 0 rgba(0, 0, 0, 0.3);
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
             letter-spacing: 0.5px;
             transform: scale(1);
             transition: transform 0.3s ease;
@@ -81,7 +81,7 @@
             animation: fadeIn 1.5s ease forwards;
         }
 
-        /* Keyframes for Navigation Bar Animation */
+     
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -128,8 +128,10 @@
         .project {
             width: 40%;
             margin: 20px 0;
-            background: linear-gradient(to right, #006d77, #83c5be);
-            color: #fff;
+            background: linear-gradient(to right, #004d54, #66b2a1);
+         color: #ffffff;
+
+
             padding: 20px;
             border-radius: 10px;
             text-align: center;
@@ -184,7 +186,7 @@
 
         #project-iframe {
             width: 100%;
-            height: 600px; /* Increased height */
+            height: 600px;
             border: none;
             margin-top: 20px;
             display: none;
@@ -211,6 +213,13 @@
                 padding: 20px;
                 margin: 20px auto;
             }
+            .nav-name{
+                display: none;
+            }
+            nav a {
+        font-size:1em;
+    }
+
 
             #projects h2 {
                 font-size: 2rem;
@@ -225,6 +234,13 @@
             #projects h2 {
                 font-size: 1.5rem;
             }
+            .nav-name{
+                display: none;
+            }
+            nav a {
+        font-size:1em;
+        margin: 0 10px;
+    }
 
             .project h3 {
                 font-size: 1.2rem;
@@ -284,8 +300,8 @@
             </div>
             <div class="project">
                 <img src="news.png" alt="News Project Image">
-                <h3>Responsive Newspaper Webpage Design</h3>
-                <p>Created a responsive newspaper webpage with dynamic article displays, hover effects, and click-to-reveal details, showcasing front-end development skills and a focus on user experience.</p>
+                <h3> Newspaper Webpage Design</h3>
+                <p>Created a newspaper webpage with dynamic article displays, hover effects, and click-to-reveal details, showcasing front-end development skills and a focus on user experience.</p>
                 <button onclick="openIframe('newspaper.html')">View Project</button>
             </div>
             <div class="project">
