@@ -37,7 +37,7 @@
     background-clip: text;
     color: transparent;
     animation: fadeIn 1.5s ease-out;
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5), 2px 2px 0 rgba(0, 0, 0, 0.4), 3px 3px 0 rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
     letter-spacing: 0.5px;
     transform: scale(1);
     transition: transform 0.3s ease;
@@ -60,7 +60,7 @@
             color: #00d4ff;
             border-bottom: 2px solid #00d4ff;
         }
-        /* Keyframes for Navigation Bar Animation */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -79,6 +79,12 @@
             text-align: center;
             margin-top: 80px;
         }
+        .personal-details p{
+            text-align: justify;
+            font-size: 1.1em;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
 
         @keyframes fadeInUp {
     from {
@@ -93,12 +99,14 @@
 
         .personal-details {
             margin-left: 30%;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(42, 65, 87, 0.1);
             border-radius: 15px;
             padding: 20px;
             margin: 20px auto;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 20px 20px 20px rgba(205, 19, 225, 0.3);
             animation: fadeInUp 4s ;
+            background: linear-gradient(to right, #4a9cef, #054c5a, #051a66);
+
         }
 
         .table {
@@ -112,18 +120,23 @@
         .table th, .table td {
             border: 3px solid rgba(30, 3, 3, 0.3);
             padding: 15px;
+            font-size: 1.1em;
+            
         }
 
         .table th {
             background-color: rgba(255, 255, 255, 0.2);
-            color: #1abc9c;
+            color: #064d3e;
+            font-weight: bold;
+            font-size: 1.5em;
+            
         }
 
         .table tr:hover {
-            background-color: rgba(255, 255, 255, 0.3);
+            background-color: rgba(231, 209, 209, 0.3);
             transition: background-color 0.3s ease;
         }
-
+        
         img {
             width: 30%;
             height: auto;
@@ -177,6 +190,12 @@
                 font-size: 1em;
                 margin: 0 10px;
             }
+            .nav-name{
+                display: none;
+            }
+            .personal-details{
+                width: 100%;
+            }
             .personal-details, .hobbies-section {
                 margin: 20px 2%;
             }
@@ -198,6 +217,10 @@
             .table th, .table td {
                 padding: 10px;
             }
+            .nav-name{
+                display: none;
+            }.personal-details{
+            width: 100%;}
         }
 
         .container {
@@ -234,10 +257,10 @@
                 <tbody>
                     <tr>
                         <td>Date of Birth:</td>
-                        <td>23-08-2004</td>
+                        <td>24-08-2004</td>
                     </tr>
                     <tr>
-                        <td>Languages Spoken:</td>
+                        <td>Languages:</td>
                         <td>English, Hindi, Marathi</td>
                     </tr>
                     <tr>
@@ -250,7 +273,7 @@
                     </tr>
                     <tr>
                         <td>Phone Number:</td>
-                        <td><a href="tel:+9999999999" class="text-info">9999999999</a></td>
+                        <td><a href="tel:+9322791806" class="text-info">9322791806</a></td>
                     </tr>
                 </tbody>
             </table>
@@ -283,9 +306,9 @@
             </div>
             <div class="carousel-item">
                 <div class="hobby-card">
-                    <i class="fas fa-cricket-ball" style="font-size: 50px; color: #1abc9c; margin-bottom: 10px;"></i>
+                    <i class="fas fa-baseball-ball" style="font-size: 50px; color: #1abc9c; margin-bottom: 10px;"></i>
                     <h3>Playing Cricket</h3>
-                    <p>Cricket is not just a sport; it’s a passion that brings joy and camaraderie.</p>
+                    <p>Engaging in cricket enhances my teamwork skills and fosters meaningful connections</p>
                 </div>
             </div>
         </div>
