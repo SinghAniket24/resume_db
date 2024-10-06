@@ -42,7 +42,7 @@
             background-clip: text;
             color: transparent;
             animation: fadeIn 1.5s ease-out;
-            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5), 2px 2px 0 rgba(0, 0, 0, 0.4), 3px 3px 0 rgba(0, 0, 0, 0.3);
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
             letter-spacing: 0.5px;
             transform: scale(1);
             transition: transform 0.3s ease;
@@ -91,20 +91,23 @@
             margin: 60px auto;
             margin-bottom: 2px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            animation: slideIn 0.5s ease forwards;
+            animation:fadeInScale 2s ease forwards;
         }
 
-        @keyframes slideIn {
-            0% {
-                transform: translateY(20px);
-                opacity: 0;
-            }
+        @keyframes fadeInScale {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
 
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
+
+
+
 
         h1 {
             margin-top: 0;
@@ -192,6 +195,7 @@
             nav {
                 padding: 10px;
             }
+            .nav-name{display:none;}
 
             nav a {
                 font-size: 1em;
@@ -234,8 +238,10 @@
 
         @media (max-width: 480px) {
             nav a {
-                font-size: 0.9em;
+                font-size:1em;
+                margin: 0 10px;
             }
+            .nav-name{display:none;}
 
             h1 {
                 font-size: 18px;
@@ -350,28 +356,27 @@
             const nameField = document.getElementById("name");
             const emailField = document.getElementById("email");
             const dateField = document.getElementById("textDate");
-            const timeField = document.getElementById("preferred_time"); // Corrected to match the ID in your HTML
+            const timeField = document.getElementById("preferred_time"); 
             const messageField = document.getElementById("message");
     
             document.getElementById("nameError").textContent = "";
             document.getElementById("emailError").textContent = "";
             document.getElementById("dateError").textContent = "";
-            document.getElementById("preferredTimeError").textContent = ""; // Added error for preferred time
-            document.getElementById("messageError").textContent = ""; // Added error for message
+            document.getElementById("preferredTimeError").textContent = ""; 
+            document.getElementById("messageError").textContent = "";
     
-            // Regex patterns
+            // Regex...........................................
             const emailPattern = /^[a-zA-Z][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
             const namePattern = /^[A-Za-z\s]+$/;
     
             let isValid = true;
     
-            // Validate name
+            
             if (nameField.value && !namePattern.test(nameField.value)) {
                 document.getElementById("nameError").textContent = "Name must only contain letters and spaces.";
                 isValid = false;
             }
     
-            // Validate email
             if (emailField.value && !emailPattern.test(emailField.value)) {
                 document.getElementById("emailError").textContent = "Please enter a valid email address.";
                 isValid = false;
@@ -382,17 +387,17 @@
             const today = new Date();
             today.setHours(0, 0, 0, 0);
             if (dateField.value && selectedDate < today) {
-                document.getElementById("dateError").textContent = "Please select today or a future date.";
+                document.getElementById("dateError").textContent = "Previous date is not allowed.";
                 isValid = false;
             }
     
-            // Validate preferred time
+          
             if (timeField.value === "") {
                 document.getElementById("preferredTimeError").textContent = "Please select a preferred time.";
                 isValid = false;
             }
     
-            // Validate message
+           
             if (messageField.value === "") {
                 document.getElementById("messageError").textContent = "Please enter a message.";
                 isValid = false;
