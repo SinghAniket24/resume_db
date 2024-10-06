@@ -7,6 +7,8 @@
     <title>Qualifications - Aniket H. Singh</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
     <style>
 
@@ -38,7 +40,7 @@ body{
     background-clip: text;
     color: transparent;
     animation: fadeIn 1.5s ease-out;
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5), 2px 2px 0 rgba(0, 0, 0, 0.4), 3px 3px 0 rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
     letter-spacing: 0.5px;
     transform: scale(1);
     transition: transform 0.3s ease;
@@ -77,7 +79,7 @@ body{
         }
         @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
-        /* Fade-in animation for navigation */
+
         .fade-in {
             opacity: 0;
             animation: fadeIn 2s forwards;
@@ -103,7 +105,7 @@ body{
             }
         }
 
-        /* Card container layout */
+        
         .card-container {
             display: flex;
             flex-wrap: wrap;
@@ -128,7 +130,6 @@ body{
             animation: slideInUp 0.6s forwards;
         }
 
-        /* Sequential delay for each card */
         .card:nth-child(1) {
             animation-delay: 0.3s;
         }
@@ -141,7 +142,7 @@ body{
             animation-delay: 0.9s;
         }
 
-        /* Slide-up animation */
+       
         @keyframes slideInUp {
             to {
                 opacity: 1;
@@ -166,14 +167,14 @@ body{
             font-weight: bold;
         }
 
-        /* Gradient hover effect with different colors */
+        
         .card:hover {
             transform: scale(1.05);
             box-shadow: 30px 20px 20px rgba(119, 27, 231, 0.4);
             background: linear-gradient(135deg, rgba(28, 8, 240, 0.8), rgba(237, 102, 115, 0.762));
         }
 
-        /* Keep text color unchanged on hover */
+        
         .card:hover h3,
         .card:hover p,
         .card:hover .highlight {
@@ -186,7 +187,7 @@ body{
             margin: 0 auto;
         }
 
-        /* Section styling */
+        
         .section {
             margin-bottom: 40px;
         }
@@ -206,7 +207,8 @@ body{
         /* Progress bar styling */
         .skill-bar {
             margin-top: 10px;
-            
+         
+            overflow: hidden;
             position: relative;
         }
 
@@ -272,23 +274,21 @@ body{
 }
 
 
-        /* Tooltip styling for percentages */
         .percentage {
             position: absolute;
             right: 10px;
             top: 0;
             color: #01050c;
             font-size: 0.85em;
-            display: block; /* Ensure it's always displayed */
+            display: block;
         }
 
-        /* Glow effect on hover for progress bars */
         .progress-bar:hover .progress {
             background-color: #2ecc71;
             box-shadow: 0 0 15px rgba(46, 204, 113, 0.8);
         }
 
-        /* Image styling */
+    
         .institute-image {
     width: 100%;
     height: 150px;
@@ -296,11 +296,14 @@ body{
     border-radius: 10px;
     margin-bottom: 10px;
 }
-/* Responsive Styles */
+
 @media (max-width: 768px) {
     nav {
         padding: 10px;
     }
+    .nav-name{
+                display: none;
+            }
 
     nav a {
         font-size: 1em;
@@ -319,8 +322,12 @@ body{
 
 @media (max-width: 480px) {
     nav a {
-        font-size: 0.9em;
+        font-size:1em;
+        margin: 0 10px;
     }
+    .nav-name{
+                display: none;
+            }
 
     .card h3 {
         font-size: 1.2em;
@@ -354,6 +361,7 @@ body{
     
 
     <br><br>
+    
 
     <div class="main-content">
         <section class="section qualification-section">
@@ -478,6 +486,23 @@ body{
         
 
     </div>
+    <script>
+        $(document).ready(function() {
+            $('.skill-bar').hide(); 
+    
+            $('.card').on('click', function() {
+                $(this).find('.skill-bar').slideToggle(300); 
+                $(this).siblings().find('.skill-bar').slideUp(300); 
+            });
+    
+            // Animate the cards on page load
+            $('.card').each(function(index) {
+                $(this).delay(index * 300).fadeIn(1000); 
+            });
+        });
+    </script>
+    
+    
     
 </body>
 
