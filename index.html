@@ -21,8 +21,6 @@
             align-items: center;
             justify-content: space-between;
             margin: 120px auto;
-            margin-top:10px;
-
             max-width: 1300px;
             padding: 30px;
             opacity: 0;
@@ -260,27 +258,21 @@
             .container {
                 flex-direction: column;
             }
-            
-.profile-image {
-    border-radius: 50%;
-    width: 250px;
-    height: 250px;
-    margin: 20px auto;
-    display: block;
-    margin-top:70px;
-    margin-bottom:0px;
-}
+
+            .profile-image {
+                visibility: hidden;
+            }
 
             h1 {
-                font-size: 1.5em;
+                font-size: 2.5em;
             }
 
             h2 {
-                font-size: 1.2em;
+                font-size: 2em;
             }
 
             p {
-                font-size: 1em;
+                font-size: 1.1em;
             }
             .nav-name{
             
@@ -298,22 +290,15 @@
             }
 
             .profile-image {
-    border-radius: 50%;
-    width: 250px;
-    height: 250px;
-    margin: 20px auto;
-    display: block;
-    
-    margin-top:70px;
-    margin-bottom:0px;
-}
+              visibility: hidden;
+            }
 
             h1 {
-                font-size: 1.5em;
+                font-size: 2em;
             }
 
             h2 {
-                font-size: 1.2em;
+                font-size: 1.8em;
             }
 
             p {
@@ -343,10 +328,6 @@
         </div>
     </nav>
 
-        </div>
-        <img src="pp.jpeg" alt="Profile Image" class="profile-image">
-    </div>
-
     <!-- Profile Section -->
     <div class="container">
         <div class="content">
@@ -363,14 +344,27 @@
             </div>
 
             <!-- Rate My Resume Section -->
-            
-        
+            <div class="rate-my-resume">
+                <button id="rate-resume-button" onclick="openIframe()">Rate My Resume</button>
+            </div>
+        </div>
+        <img src="pp.jpeg" alt="Profile Image" class="profile-image">
+    </div>
 
     <!-- Iframe for Rate My Resume -->
-   
+    <div class="iframe-container" id="iframe-container">
+        <span class="close-icon" onclick="closeIframe()">&times;</span>
+        <iframe src="ratings.php" title="Rate My Resume"></iframe>
+    </div>
 
     <script>
-        
+        function openIframe() {
+            document.getElementById('iframe-container').style.display = 'flex';
+        }
+
+        function closeIframe() {
+            document.getElementById('iframe-container').style.display = 'none';
+        }
 
         // Typing Animation for Header
         const typedText = "Hey, I'm Aniket Singh.";
