@@ -1,415 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form - Aniket H. Singh</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            background: linear-gradient(to right, #051a66, #054c5a, #d8e0e8);
-            color: #fff;
-            margin-top: 0;
-            animation: fadeIn 1s ease forwards;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* Navigation Bar */
-        nav {
-            background-color: #0077b6;
-            padding: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            animation: fadeIn 2s ease-out;
-        }
-
-        .nav-name {
-            font-size: 1.8em;
-            font-weight: bold;
-            margin-left: 20px;
-            background: linear-gradient(135deg, #ff007f, #ff4f4f, #ff7f00, #ffaf00, #00ff15);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            color: transparent;
-            animation: fadeIn 1.5s ease-out;
-            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
-            letter-spacing: 0.5px;
-            transform: scale(1);
-            transition: transform 0.3s ease;
-        }
-
-        .nav-name:hover {
-            transform: scale(1.2);
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.2em;
-            margin: 0 20px;
-            transition: color 0.3s ease, border-bottom 0.3s ease;
-            padding-bottom: 5px;
-        }
-
-        nav a:hover {
-            color: aqua;
-        }
-
-        nav a.active {
-            color: #1b0768;
-            border-bottom: 2px solid #caf0f8;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .form-container {
-            width: 100%;
-            max-width: 500px;
-            background: rgba(26, 27, 27, 0.31);
-            padding: 20px;
-            border-radius: 20px;
-            margin: 60px auto;
-            margin-bottom: 2px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            animation:fadeInScale 2s ease forwards;
-        }
-
-        @keyframes fadeInScale {
-    0% {
-        transform: scale(0.8);
-        opacity: 0;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    100% {
-        transform: scale(1);
-        opacity: 1;
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
-}
 
+    #contact-me {
+      width: 100%;
+      max-width: 600px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin: 20px;
+    }
 
+    #contact-me h1 {
+      text-align: center;
+      margin-bottom: 15px;
+      color: #000;
+    }
 
+    #contact-me p {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #555;
+    }
 
-
-        h1 {
-            margin-top: 0;
-            font-size: 24px;
-            text-align: center;
-            color: #fff;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: #fff;
-            font-size: 20px;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="date"],
-        textarea,
-        select {
-            width: 100%;
-            padding: 10px 15px;
-            box-sizing: border-box;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 16px;
-            background-color: #fff;
-            color: #333;
-            box-shadow: inset 0 2px 4px rgba(44, 10, 216, 0.5);
-        }
-
-        button {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            background-color: #b1cdf3;
-            color: #1b0637;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        button:hover {
-            color: #fff;
-            background-color: #0077b6;
-            transform: scale(1.05);
-        }
-
-        button i {
-            margin-right: 8px;
-        }
-
-     .contact-info {
-        margin-top:0;
-        text-align: center;
-        font-size: 18px;
-        color: #fff;
-        background: rgba(0, 0, 0, 0.5);
-        padding: 15px;
-        border-radius: 10px;
+    .contact-info {
+      text-align: center;
+      margin-top: 20px;
     }
 
     .contact-info a {
-        color: #d2cbdb;
-        text-decoration: underline;
-        transition: color 0.3s;
+      color: #000;
+      text-decoration: none;
     }
 
     .contact-info a:hover {
-        color: rgb(168, 168, 247);
-        text-shadow: 5px 5px 5px #1b0768;
+      text-decoration: underline;
     }
 
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      background-color: #000;
+      padding: 20px;
+      border-radius: 10px;
+    }
 
+    form label {
+      font-weight: bold;
+      color: #fff;
+    }
 
-        @media (max-width: 768px) {
-            nav {
-                padding: 10px;
-            }
-            .nav-name{display:none;}
+    form input, form textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      background: #fff;
+      color: #000;
+    }
 
-            nav a {
-                font-size: 1em;
-                margin: 0 10px;
-            }
+    form input:focus, form textarea:focus {
+      border-color: #fff;
+      outline: none;
+    }
 
-            .form-container {
-                width: 90%;
-                padding: 15px;
-            }
+    form button {
+      padding: 10px 20px;
+      background-color: #fff;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
 
-            h1 {
-                font-size: 20px;
-            }
+    form button:hover {
+      background-color: #ccc;
+    }
 
-            label {
-                font-size: 18px;
-            }
-
-            input[type="text"],
-            input[type="email"],
-            input[type="date"],
-            textarea,
-            select {
-                font-size: 14px;
-            }
-
-            button {
-                font-size: 14px;
-            }
-
-            .contact-info {
-                font-size: 16px;
-            }
-
-            .social-links a {
-                font-size: 20px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            nav a {
-                font-size:1em;
-                margin: 0 10px;
-            }
-            .nav-name{display:none;}
-
-            h1 {
-                font-size: 18px;
-            }
-
-            label {
-                font-size: 16px;
-            }
-
-            input[type="text"],
-            input[type="email"],
-            input[type="date"],
-            textarea,
-            select {
-                font-size: 12px;
-            }
-
-            button {
-                font-size: 12px;
-            }
-
-            .contact-info {
-                font-size: 14px;
-            }
-
-            .social-links a {
-                font-size: 18px;
-            }
-        }
-
-        .error {
-            color: #ff6b6b;
-            font-size: 14px;
-            margin-top: 5px;
-        }
-    </style>
+    @media (max-width: 768px) {
+      #contact-me {
+        padding: 15px;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <section id="contact-me">
+    <div class="container">
+      <h1>Contact Me</h1>
+      <p>Feel free to reach out to me for queries, collaborations, or project discussions.</p>
+      
+      <form id="contact-form">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+        
+        <button type="submit">Send Message</button>
+      </form>
 
-    <nav>
-        <div class="nav-name">Aniket H. Singh</div>
-        <div>
-            <a href="index.html">My Profile</a>
-            <a href="personal.html">About Me</a>
-            <a href="qualifications.html">Education & Skills</a>
-            <a href="c.html">Projects</a>
-            <a href="form_resume.html" class="active">Contact Me</a>
-        </div>
-    </nav>
-
-    <br><br><br><br>
-
-    <div class="form-container">
-        <h1>Contact Me</h1>
-        <form id="contactForm" action="contact.php" method="POST">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <span class="error" id="nameError"></span>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <span class="error" id="emailError"></span>
-            </div>
-
-            <!-- <div class="form-group">
-                <label for="textDate">Virtual Meet Date:</label>
-                <input type="date" id="textDate" name="meet_date" required>
-                <span class="error" id="dateError"></span>
-            </div>
-
-            <div class="form-group">
-                <label for="preferred_time">Preferred Time:</label>
-                <select id="preferred_time" name="preferred_time" required>
-                    <option value="">Select Time</option>
-                    <option value="9">9:00 AM</option>
-                    <option value="10">10:00 AM</option>
-                    <option value="11">11:00 AM</option>
-                    <option value="12:00">12:00 PM</option>
-                    <option value="13">1:00 PM</option>
-                    <option value="14">2:00 PM</option>
-                    <option value="15">3:00 PM</option>
-                    <option value="16">4:00 PM</option>
-                </select>
-                <span class="error" id="preferredTimeError"></span>
-            </div> -->
-
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                <span class="error" id="messageError"></span>
-            </div>
-
-            <button type="submit">
-                <i class="fas fa-paper-plane"></i> Submit
-            </button>
-        </form>
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:aniket.singh.st1@gmail.com">aniket.singh.st1@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a></p>
+      </div>
     </div>
+  </section>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent form submission
 
-    <div class="contact-info">
-        <p>Phone: <a href="tel:9322791806" >9322791806</a></p>
-        <p>Email: <a href="mailto:aniket.singh.st1@gmail.com" >aniket.singh.st1@gmail.com</a></p>
-    </div>
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
 
-    <script>
-        document.querySelector("form").addEventListener("submit", function (event) {
-            event.preventDefault();
-    
-            const nameField = document.getElementById("name");
-            const emailField = document.getElementById("email");
-            const dateField = document.getElementById("textDate");
-            const timeField = document.getElementById("preferred_time"); 
-            const messageField = document.getElementById("message");
-    
-            document.getElementById("nameError").textContent = "";
-            document.getElementById("emailError").textContent = "";
-            document.getElementById("dateError").textContent = "";
-            document.getElementById("preferredTimeError").textContent = ""; 
-            document.getElementById("messageError").textContent = "";
-    
-            // Regex...........................................
-            const emailPattern = /^[a-zA-Z][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            const namePattern = /^[A-Za-z\s]+$/;
-    
-            let isValid = true;
-    
-            
-            if (nameField.value && !namePattern.test(nameField.value)) {
-                document.getElementById("nameError").textContent = "Name must only contain letters and spaces.";
-                isValid = false;
-            }
-    
-            if (emailField.value && !emailPattern.test(emailField.value)) {
-                document.getElementById("emailError").textContent = "Please enter a valid email address.";
-                isValid = false;
-            }
-    
-            // Validate date
-            const selectedDate = new Date(dateField.value);
-            const today = new Date();
-            today.setHours(0, 0, 0, 0);
-            if (dateField.value && selectedDate < today) {
-                document.getElementById("dateError").textContent = "Previous date is not allowed.";
-                isValid = false;
-            }
-    
-          
-            if (timeField.value === "") {
-                document.getElementById("preferredTimeError").textContent = "Please select a preferred time.";
-                isValid = false;
-            }
-    
-           
-            if (messageField.value === "") {
-                document.getElementById("messageError").textContent = "Please enter a message.";
-                isValid = false;
-            }
-    
-            if (isValid) {
-                this.submit();
-            }
-        });
-    </script>
-    
-    
+      if (name === '') {
+        alert('Please enter your name.');
+        return;
+      }
+
+      if (email === '' || !/^[^\d][a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+
+      if (message === '') {
+        alert('Please enter a message.');
+        return;
+      }
+
+      alert('Thank you for your message!');
+    });
+  </script>
 </body>
-
 </html>
