@@ -125,25 +125,27 @@
         }
 
 
-        .profile-image {
-            border-radius: 50%;
-            width: 450px;
-            height: 450px;
-            object-fit: cover;
-            border: 5px solid rgba(0, 191, 255, 0.7);
-            box-shadow: 0 0 30px rgba(0, 191, 255, 0.7), 0 0 60px rgba(0, 191, 255, 0.5);
-            transition: border-color 0.3s ease, transform 0.3s ease;
-            opacity: 0;
-            transform: translateY(-20px);
-            animation: slideInImage 0.5s forwards;
-            animation-delay: 0.5s;
-        }
+       .profile-image {
+    border-radius: 50%;
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    border: 5px solid rgba(0, 191, 255, 0.7);
+    box-shadow: 0 0 30px rgba(0, 191, 255, 0.7), 0 0 60px rgba(0, 191, 255, 0.5);
+    transition: border-color 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideInImage 0.5s forwards;
+    animation-delay: 0.5s;
+    margin-left: 0; /* Align to the left */
+}
 
-        .profile-image:hover {
-            background-clip: padding-box;
-            box-shadow: 0 0 30px rgba(255, 0, 43, 0.9), 0 0 60px rgba(47, 0, 255, 0.7);
-            transform: scale(1.1);
-        }
+.profile-image:hover {
+    background-clip: padding-box;
+    box-shadow: 0 0 30px rgba(255, 0, 43, 0.9), 0 0 60px rgba(47, 0, 255, 0.7);
+    transform: scale(1.1);
+}
+
 
      
         @keyframes slideInImage {
