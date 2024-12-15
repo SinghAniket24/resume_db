@@ -147,9 +147,7 @@
     transform: scale(1.1);
     
 }
-        .pp2{
-            visibility:hidden;
-        }
+       
 
 
      
@@ -302,15 +300,10 @@
                 margin: 0 10px;
             }
 
-            .pp2 {
-                    object-fit: cover;
-    border: 5px solid rgba(0, 191, 255, 0.7);
-               border:50%;
-    width: 100%;
-    height: auto;
-}
             .profile-image {
-                visibility:hidden;}
+visibilty:hidden;
+}
+            
 
 
             h1 {
@@ -347,13 +340,7 @@
           
         </div>
     </nav>
-    
-    </div>
-        <img src="pp.jpeg" alt="Profile Image" class="pp2">
-    </div>
-       
-    <!-- Profile Section -->
-    <div class="container">
+     <div class="container">
         <div class="content">
             <h1 id="typed-text"></h1>
             <h2>"Web Developer & Data Analyst"</h2>
@@ -368,19 +355,16 @@
             </div>
 
             <!-- Rate My Resume Section -->
-            <div class="rate-my-resume">
-                <button id="rate-resume-button" onclick="openIframe()">Rate My Resume</button>
-            </div>
-        </div>
-        <img src="pp.jpeg" alt="Profile Image" class="profile-image">
-    </div>
-
-    <!-- Iframe for Rate My Resume -->
-    <div class="iframe-container" id="iframe-container">
+            <div class="iframe-container" id="iframe-container">
         <span class="close-icon" onclick="closeIframe()">&times;</span>
         <iframe src="form_resume.html" title="Contact me"></iframe>
     </div>
 
+        </div>
+        <img src="pp.jpeg" alt="Profile Image" class="profile-image">
+    </div>
+    <!-- Iframe for Rate My Resume -->
+   
     <script>
         function openIframe() {
             document.getElementById('iframe-container').style.display = 'flex';
