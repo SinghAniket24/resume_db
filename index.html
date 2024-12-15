@@ -259,9 +259,10 @@
                 flex-direction: column;
             }
 
-            .profile-image {
-                visibility: hidden;
-            }
+           .profile-image {
+    width: 100%;
+    height: auto;
+}
 
             h1 {
                 font-size: 2.5em;
@@ -290,8 +291,10 @@
             }
 
             .profile-image {
-              visibility: hidden;
-            }
+    width: 100%;
+    height: auto;
+}
+
 
             h1 {
                 font-size: 2em;
@@ -331,6 +334,9 @@
     <!-- Profile Section -->
     <div class="container">
         <div class="content">
+             </div>
+        <img src="pp.jpeg" alt="Profile Image" class="profile-image">
+    </div>
             <h1 id="typed-text"></h1>
             <h2>"Web Developer & Data Analyst"</h2>
             <p>I'm passionate about building dynamic, user-friendly websites and leveraging data for impactful insights. With skills in Python, C++, R, HTML, Java, and SQL, I enjoy turning ideas into real-life digital experiences while applying data analysis to enhance decision-making.</p>
@@ -347,9 +353,7 @@
             <div class="rate-my-resume">
                 <button id="rate-resume-button" onclick="openIframe()">Contact me</button>
             </div>
-        </div>
-        <img src="pp.jpeg" alt="Profile Image" class="profile-image">
-    </div>
+       
 
     <!-- Iframe for Rate My Resume -->
     <div class="iframe-container" id="iframe-container">
