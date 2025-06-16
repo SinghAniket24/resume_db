@@ -1,329 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Details & Hobbies - Aniket H. Singh</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <style>
-        body {
-            background: linear-gradient(to right, #051a66, #054c5a, #d8e0e8);
-            color: #f8f9fa;
-        }
-
-        nav {
-            background-color: #0077b6;
-            padding: 15px;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            animation: fadeIn 2s ease-out;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-name {
-    font-size: 1.8em;
-    font-weight: bold;
-    margin-left: 20px;
-    background: linear-gradient(135deg, #ff007f, #ff4f4f, #ff7f00, #ffaf00, #00ff15);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-    animation: fadeIn 1.5s ease-out;
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
-    letter-spacing: 0.5px;
-    transform: scale(1);
-    transition: transform 0.3s ease;
-}
-
-.nav-name:hover {
-    transform: scale(1.2);
-}
-
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 1.2em;
-            margin: 0 20px;
-            transition: color 0.3s ease, border-bottom 0.3s ease;
-            padding-bottom: 5px;
-        }
-
-        nav a:hover {
-            color: #00d4ff;
-            border-bottom: 2px solid #00d4ff;
-        }
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Details & Hobbies - Aniket H. Singh</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      background: linear-gradient(to right, #051a66, #054c5a, #d8e0e8);
+      color: #f8f9fa;
     }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    nav {
+      background-color: #0077b6;
+      padding: 15px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-}
 
-
-        h1 {
-            color: #f8f9fa;
-            text-align: center;
-            margin-top: 80px;
-        }
-        .personal-details p{
-            text-align: justify;
-            font-size: 1em;
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-
-        @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(100px);
+    .nav-name {
+      font-size: 1.8em;
+      font-weight: bold;
+      margin-left: 20px;
+      background: linear-gradient(135deg, #ff007f, #ff4f4f, #ff7f00, #ffaf00, #00ff15);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+      letter-spacing: 0.5px;
+      transition: transform 0.3s ease;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    .nav-name:hover {
+      transform: scale(1.2);
     }
-}
 
-        .personal-details {
-            margin-left: 30%;
-            background: rgba(42, 65, 87, 0.1);
-            border-radius: 15px;
-            padding: 20px;
-            margin: 20px auto;
-            box-shadow: 20px 20px 20px rgba(205, 19, 225, 0.3);
-            animation: fadeInUp 4s ;
-            background: linear-gradient(to right, #4a9cef, #054c5a, #051a66);
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1.2em;
+      margin: 0 20px;
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+    }
 
-        }
+    nav a:hover {
+      color: #00d4ff;
+      border-bottom: 2px solid #00d4ff;
+    }
 
-        .table {
-            background-color: rgba(239, 21, 21, 0.1);
-            border-radius: 15px;
-            color: #ffffff;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            margin-bottom: 20px;
-            width:90%;
-        }
+    h1 {
+      text-align: center;
+      margin-top: 90px;
+    }
 
-        .table th, .table td {
-            border: 3px solid rgba(30, 3, 3, 0.3);
-            padding: 15px;
-            font-size: 1em;
-            
-        }
+    .personal-details {
+      background: linear-gradient(to right, #4a9cef, #054c5a, #051a66);
+      border-radius: 15px;
+      padding: 30px;
+      margin: 30px auto;
+      width: 90%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
 
-        .table th {
-            background-color: rgba(255, 255, 255, 0.2);
-            color: #064d3e;
-            font-weight: bold;
-            font-size: 1em;
-            
-        }
+    .experience-card {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      margin-top: 20px;
+    }
 
-        .table tr:hover {
-            background-color: rgba(231, 209, 209, 0.3);
-            transition: background-color 0.3s ease;
-        }
-        
-        img {
-            width: 30%;
-            height: auto;
-            border-radius: 10%;
-            margin-bottom: 20px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+    .experience-card h4,
+    .experience-card p {
+      margin: 5px 0;
+    }
 
-        img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(229, 255, 0, 0.5), 
-                        0 8px 30px rgba(255, 0, 255, 0.5);
-        }
+    .table {
+      background-color: rgba(239, 21, 21, 0.1);
+      border-radius: 15px;
+      color: #ffffff;
+      width: 100%;
+    }
 
-        .hobbies-section {
-            margin: 40px 5%;
-        }
+    .table th, .table td {
+      padding: 15px;
+    }
 
-        .hobby-card {
-            background: linear-gradient(135deg, #161a1f, #3d79b5);
-            border-radius: 15px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-            color: #ecf0f1;
-            padding: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-            text-align: center;
-        }
+    .table th {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #064d3e;
+    }
 
-        .hobby-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
-            background-color: #34495e;
-        }
-
-        .hobby-card h3 {
-            margin: 15px 0;
-            font-size: 1.5em;
-            color: #1abc9c;
-        }
-
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-            background-color: #0077b6;
-        }
-
-        @media (max-width: 768px) {
-            nav a {
-                font-size: 1em;
-                margin: 0 10px;
-            }
-            .nav-name{
-                display: none;
-            }
-            .personal-details{
-                width: 100%;
-            }
-            .personal-details, .hobbies-section {
-                margin: 20px 2%;
-            }
-            img {
-                width: 80%;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.5em;
-            }
-            .hobby-card h3 {
-                font-size: 1.2em;
-            }
-            .hobby-card p {
-                font-size: 0.9em;
-            }
-            .table th, .table td {
-                padding: 10px;
-            }
-            .nav-name{
-                display: none;
-            }.personal-details{
-            width: 100%;}
-        }
-
-        .container {
-            max-width: 3000px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    </style>
+    @media (max-width: 768px) {
+      nav a {
+        font-size: 1em;
+        margin: 0 10px;
+      }
+      .nav-name {
+        display: none;
+      }
+      .personal-details {
+        width: 100%;
+        margin: 20px auto;
+      }
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <span class="nav-name">Aniket H. Singh</span>
-        <div>
-            <a href="index.html">My Profile</a>
-            <a href="personal.html" class="active">About Me</a>
-            <a href="qualifications.html">Education & Skills</a>
-            <a href="c.html">Projects</a>
-          
-        </div>
-    </nav>
-
-    <div class="container">
-        <div class="personal-details">
-            <h1>Personal Information</h1>
-            <img src="imgs/p.jpeg" alt="Profile Picture">
-            <p>I am currently pursuing a Bachelor’s degree in Information Technology at St. Xavier's College, Mumbai. My passion for web development drives me to create user-friendly websites and effectively analyze data. As part of my social involvement plan, I have had the rewarding experience of working with underprivileged students, fostering their growth and learning. Outside of academics, I have a profound appreciation for nature and enjoy exploring its trails, as they provide me with inspiration and a renewed sense of perspective.</p>
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Detail</th>
-                        <th>Information</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Date of Birth:</td>
-                        <td>24-08-2004</td>
-                    </tr>
-                    <tr>
-                        <td>Languages:</td>
-                        <td>English, Hindi, Marathi</td>
-                    </tr>
-                    <tr>
-                        <td>Residential Address:</td>
-                        <td>Room no 3389, Ladinaka, Ambarnath West</td>
-                    </tr>
-                    <tr>
-                        <td>Email:</td>
-                        <td><a href="mailto:aniket.singh.st1@gmail.com" class="text-info">aniket.singh.st1@gmail.com</a></td>
-                    </tr>
-                    <tr>
-                        <td>Phone Number:</td>
-                        <td><a href="tel:+9322791806" class="text-info">9322791806</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+  <nav>
+    <span class="nav-name">Aniket H. Singh</span>
+    <div>
+      <a href="index.html">My Profile</a>
+      <a href="personal.html" class="active">About Me</a>
+      <a href="qualifications.html">Education & Skills</a>
+      <a href="c.html">Projects</a>
     </div>
+  </nav>
 
-    <h1 class="text-center">My Interests and Hobbies</h1>
-    <div id="hobbiesCarousel" class="carousel slide hobbies-section" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="hobby-card">
-                    <i class="fas fa-camera" style="font-size: 50px; color: #1abc9c; margin-bottom: 10px;"></i>
-                    <h3>Traveling & Photography</h3>
-                    <p>I love exploring new places and capturing the beauty of the world through my camera lens.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="hobby-card">
-                    <i class="fas fa-book" style="font-size: 50px; color: #1abc9c; margin-bottom: 10px;"></i>
-                    <h3>Science Fiction Reading</h3>
-                    <p>Diving into science fiction novels sparks my imagination and transports me to different worlds.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="hobby-card">
-                    <i class="fas fa-puzzle-piece" style="font-size: 50px; color: #1abc9c; margin-bottom: 10px;"></i>
-                    <h3>Solving Puzzles</h3>
-                    <p>Challenges like puzzles enhance my problem-solving skills and keep my mind sharp.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="hobby-card">
-                    <i class="fas fa-baseball-ball" style="font-size: 50px; color: #1abc9c; margin-bottom: 10px;"></i>
-                    <h3>Playing Cricket</h3>
-                    <p>Engaging in cricket enhances my teamwork skills and fosters meaningful connections</p>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#hobbiesCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#hobbiesCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+  <div class="container">
+    <div class="personal-details">
+      <h1>Personal Information</h1>
+      <p>I am currently pursuing a Bachelor’s degree in Information Technology at St. Xavier's College, Mumbai. My passion for web development drives me to create user-friendly websites and effectively analyze data. I also enjoy exploring nature trails which provide inspiration and perspective.</p>
+
+      <div class="experience-card">
+        <h4><i class="fas fa-briefcase"></i> Experience</h4>
+        <p><strong>Organization:</strong> Yellow Cube, Kharghar</p>
+        <p><strong>Role:</strong> Full Stack Developer</p>
+        <p><strong>Duration:</strong> May - Current</p>
+      </div>
+
+      <table class="table table-striped mt-4">
+        <thead>
+          <tr>
+            <th>Detail</th>
+            <th>Information</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Date of Birth:</td>
+            <td>24-08-2004</td>
+          </tr>
+          <tr>
+            <td>Languages:</td>
+            <td>English, Hindi, Marathi</td>
+          </tr>
+          <tr>
+            <td>Residential Address:</td>
+            <td>Room no 3389, Ladinaka, Ambarnath West</td>
+          </tr>
+          <tr>
+            <td>Email:</td>
+            <td><a href="mailto:aniket.singh.st1@gmail.com" class="text-info">aniket.singh.st1@gmail.com</a></td>
+          </tr>
+          <tr>
+            <td>Phone Number:</td>
+            <td><a href="tel:+9322791806" class="text-info">9322791806</a></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+  </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
