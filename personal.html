@@ -12,8 +12,8 @@
       background: linear-gradient(to right, #051a66, #054c5a, #d8e0e8);
       color: #f8f9fa;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
     }
-
     nav {
       background-color: #0077b6;
       padding: 15px;
@@ -25,7 +25,6 @@
       justify-content: space-between;
       align-items: center;
     }
-
     .nav-name {
       font-size: 1.8em;
       font-weight: bold;
@@ -36,125 +35,132 @@
       background-clip: text;
       color: transparent;
     }
-
     nav a {
       color: #ffffff;
       text-decoration: none;
       font-size: 1.1em;
       margin: 0 15px;
+      transition: color 0.2s;
     }
-
-    nav a:hover {
+    nav a:hover, nav a.active {
       color: #00d4ff;
       border-bottom: 2px solid #00d4ff;
     }
-
-    h1 {
+    main {
+      margin-top: 90px;
+      margin-bottom: 40px;
+    }
+    .section-title {
       text-align: center;
-      margin-top: 100px;
       margin-bottom: 30px;
+      font-weight: 700;
+      letter-spacing: 1px;
     }
-
-    .personal-details {
+    .card-custom {
       background: linear-gradient(to right, #1a2a6c, #3d7eaa);
-      border-radius: 15px;
-      padding: 30px;
-      margin: 40px auto;
-      width: 85%;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+      border-radius: 18px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+      border: none;
+      color: #f8f9fa;
+      padding: 2rem 2.5rem;
+      margin-bottom: 2.5rem;
     }
-
-    .personal-details p {
-      font-size: 1.05em;
-      text-align: justify;
-    }
-
-    .table {
-      background-color: rgba(255, 255, 255, 0.05);
-      color: #ffffff;
+    .card-custom .table {
+      background-color: rgba(255,255,255,0.04);
+      color: #fff;
       border-radius: 10px;
-      margin-top: 20px;
-      width: 100%;
+      margin-top: 18px;
     }
-
-    .table th, .table td {
-      padding: 15px;
-      font-size: 1em;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .table th {
+    .card-custom .table th {
       color: #ffe600;
+      border: none;
     }
-
+    .card-custom .table td {
+      border: none;
+    }
+    .contact-link {
+      color: #00d4ff !important;
+      text-decoration: underline;
+      font-weight: 500;
+    }
     .experience-card {
       background: linear-gradient(to right, #144771, #1976d2);
-      color: #ffffff;
-      border-radius: 15px;
-      padding: 25px;
-      margin: 40px auto;
-      width: 85%;
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+      border-radius: 18px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+      color: #fff;
+      padding: 2rem 2.5rem;
+      margin-bottom: 2.5rem;
+      border: none;
     }
-
     .experience-card h3 {
-      font-size: 1.6em;
+      font-size: 1.5em;
       color: #00ffea;
       margin-bottom: 10px;
+      font-weight: 700;
     }
-
-    .experience-card p {
-      font-size: 1.1em;
-      line-height: 1.6;
-    }
-
     .hobbies-section {
-      margin: 50px auto;
-      width: 90%;
+      margin: 0 auto 50px auto;
+      max-width: 700px;
     }
-
     .hobby-card {
       background: linear-gradient(135deg, #1b1f2b, #3a6ea5);
       border-radius: 15px;
-      padding: 20px;
+      padding: 30px 20px 25px 20px;
       text-align: center;
       color: #ecf0f1;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-      margin: 10px;
-      transition: transform 0.3s ease;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+      margin: 0 10px;
+      min-height: 270px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s;
     }
-
     .hobby-card:hover {
-      transform: scale(1.05);
+      transform: scale(1.04);
     }
-
-    .hobby-card h3 {
-      margin-top: 15px;
+    .hobby-card i {
+      font-size: 48px;
       color: #1abc9c;
+      margin-bottom: 15px;
     }
-
+    .hobby-card h3 {
+      color: #1abc9c;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      font-weight: 600;
+      font-size: 1.25em;
+    }
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
       background-color: #0077b6;
+      border-radius: 50%;
+      width: 2.5rem;
+      height: 2.5rem;
     }
-
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 8%;
+    }
+    @media (max-width: 992px) {
+      .card-custom, .experience-card {
+        padding: 1.2rem 1rem;
+      }
+      .hobbies-section {
+        max-width: 98%;
+      }
+    }
     @media (max-width: 768px) {
-      .nav-name {
-        display: none;
-      }
-      .personal-details, .experience-card {
-        width: 95%;
-        padding: 20px;
-      }
+      .nav-name { display: none; }
+      main { margin-top: 80px; }
+      .card-custom, .experience-card { padding: 1rem 0.5rem; }
+      .hobbies-section { max-width: 100%; }
     }
-
     @media (max-width: 480px) {
-      h1 {
-        font-size: 1.4em;
-      }
-      .hobby-card h3 {
-        font-size: 1.2em;
-      }
+      .section-title { font-size: 1.3em; }
+      .hobby-card h3 { font-size: 1.1em; }
+      .hobby-card { padding: 18px 5px 15px 5px; min-height: 200px; }
     }
   </style>
 </head>
@@ -169,95 +175,115 @@
     </div>
   </nav>
 
-  <div class="personal-details">
-    <h1>Personal Information</h1>
-    <p>
-      I am currently pursuing a Bachelor’s degree in Information Technology at St. Xavier's College, Mumbai.
-      My passion for web development drives me to create user-friendly websites and effectively analyze data.
-      As part of my social involvement plan, I have had the rewarding experience of working with underprivileged students,
-      fostering their growth and learning. Outside of academics, I enjoy nature trails that inspire and refresh my perspective.
-    </p>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Detail</th>
-          <th>Information</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Date of Birth:</td>
-          <td>24-08-2004</td>
-        </tr>
-        <tr>
-          <td>Languages:</td>
-          <td>English, Hindi, Marathi</td>
-        </tr>
-        <tr>
-          <td>Residential Address:</td>
-          <td>Room no 3389, Ladinaka, Ambarnath West</td>
-        </tr>
-        <tr>
-          <td>Email:</td>
-          <td><a href="mailto:aniket.singh.st1@gmail.com" class="text-info">aniket.singh.st1@gmail.com</a></td>
-        </tr>
-        <tr>
-          <td>Phone Number:</td>
-          <td><a href="tel:+9322791806" class="text-info">9322791806</a></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <main class="container-fluid px-2 px-md-5">
+    <!-- Personal Information -->
+    <section class="row justify-content-center">
+      <div class="col-lg-8 col-md-10">
+        <div class="card card-custom">
+          <h1 class="section-title"><i class="fas fa-user-circle me-2"></i>Personal Information</h1>
+          <p>
+            I am currently pursuing a Bachelor’s degree in Information Technology at St. Xavier's College, Mumbai.
+            My passion for web development drives me to create user-friendly websites and effectively analyze data.
+            As part of my social involvement plan, I have had the rewarding experience of working with underprivileged students,
+            fostering their growth and learning. Outside of academics, I enjoy nature trails that inspire and refresh my perspective.
+          </p>
+          <div class="table-responsive">
+            <table class="table align-middle">
+              <tbody>
+                <tr>
+                  <th scope="row"><i class="fas fa-birthday-cake me-2"></i>Date of Birth</th>
+                  <td>24-08-2004</td>
+                </tr>
+                <tr>
+                  <th scope="row"><i class="fas fa-language me-2"></i>Languages</th>
+                  <td>English, Hindi, Marathi</td>
+                </tr>
+                <tr>
+                  <th scope="row"><i class="fas fa-home me-2"></i>Residential Address</th>
+                  <td>Room no 3389, Ladinaka, Ambarnath West</td>
+                </tr>
+                <tr>
+                  <th scope="row"><i class="fas fa-envelope me-2"></i>Email</th>
+                  <td>
+                    <a href="mailto:aniket.singh.st1@gmail.com" class="contact-link">
+                      <i class="fas fa-paper-plane me-1"></i>aniket.singh.st1@gmail.com
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><i class="fas fa-phone-alt me-2"></i>Phone Number</th>
+                  <td>
+                    <a href="tel:+9322791806" class="contact-link">
+                      <i class="fas fa-mobile-alt me-1"></i>9322791806
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <div class="experience-card">
-    <h3>Experience</h3>
-    <p><strong>Organization:</strong> Yellow Cube, Kharghar</p>
-    <p><strong>Role:</strong> Full Stack Developer</p>
-    <p><strong>Duration:</strong> May 2025 – Current</p>
-  </div>
+    <!-- Experience -->
+    <section class="row justify-content-center">
+      <div class="col-lg-8 col-md-10">
+        <div class="card experience-card">
+          <h3><i class="fas fa-briefcase me-2"></i>Experience</h3>
+          <ul class="mb-0 ps-3">
+            <li><strong>Organization:</strong> Yellow Cube, Kharghar</li>
+            <li><strong>Role:</strong> Full Stack Developer</li>
+            <li><strong>Duration:</strong> May 2025 – Current</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-  <h1 class="text-center">My Interests and Hobbies</h1>
-  <div id="hobbiesCarousel" class="carousel slide hobbies-section" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="hobby-card">
-          <i class="fas fa-camera" style="font-size: 50px; color: #1abc9c;"></i>
-          <h3>Traveling & Photography</h3>
-          <p>I love exploring new places and capturing the beauty of the world through my camera lens.</p>
+    <!-- Hobbies Carousel -->
+    <section class="hobbies-section">
+      <h1 class="section-title"><i class="fas fa-heart me-2"></i>My Interests and Hobbies</h1>
+      <div id="hobbiesCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="hobby-card">
+              <i class="fas fa-camera"></i>
+              <h3>Traveling & Photography</h3>
+              <p>I love exploring new places and capturing the beauty of the world through my camera lens.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="hobby-card">
+              <i class="fas fa-book"></i>
+              <h3>Science Fiction Reading</h3>
+              <p>Diving into science fiction novels sparks my imagination and transports me to different worlds.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="hobby-card">
+              <i class="fas fa-puzzle-piece"></i>
+              <h3>Solving Puzzles</h3>
+              <p>Challenges like puzzles enhance my problem-solving skills and keep my mind sharp.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="hobby-card">
+              <i class="fas fa-baseball-ball"></i>
+              <h3>Playing Cricket</h3>
+              <p>Engaging in cricket enhances my teamwork skills and fosters meaningful connections.</p>
+            </div>
+          </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#hobbiesCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#hobbiesCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-      <div class="carousel-item">
-        <div class="hobby-card">
-          <i class="fas fa-book" style="font-size: 50px; color: #1abc9c;"></i>
-          <h3>Science Fiction Reading</h3>
-          <p>Diving into science fiction novels sparks my imagination and transports me to different worlds.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="hobby-card">
-          <i class="fas fa-puzzle-piece" style="font-size: 50px; color: #1abc9c;"></i>
-          <h3>Solving Puzzles</h3>
-          <p>Challenges like puzzles enhance my problem-solving skills and keep my mind sharp.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="hobby-card">
-          <i class="fas fa-baseball-ball" style="font-size: 50px; color: #1abc9c;"></i>
-          <h3>Playing Cricket</h3>
-          <p>Engaging in cricket enhances my teamwork skills and fosters meaningful connections.</p>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#hobbiesCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#hobbiesCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-
+    </section>
+  </main>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
