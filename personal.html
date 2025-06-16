@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Details & Experience - Aniket H. Singh</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Details & Hobbies - Aniket H. Singh</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
   <style>
     body {
-      background: linear-gradient(110deg, #051a66 0%, #054c5a 60%, #e9f1fa 100%);
-      color: #23272f;
+      background: linear-gradient(to right, #051a66, #054c5a, #d8e0e8);
+      color: #f8f9fa;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      min-height: 100vh;
     }
 
     nav {
-      background: #fff;
-      box-shadow: 0 2px 8px rgba(4, 44, 84, 0.09);
-      padding: 0.8rem 0;
+      background-color: #0077b6;
+      padding: 15px;
       position: fixed;
       width: 100%;
       top: 0;
@@ -25,124 +24,137 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      transition: box-shadow 0.3s;
     }
 
     .nav-name {
-      font-size: 1.7em;
+      font-size: 1.8em;
       font-weight: bold;
-      margin-left: 2rem;
-      background: linear-gradient(90deg, #ff007f, #ff7f00, #00ff15 90%);
+      margin-left: 20px;
+      background: linear-gradient(135deg, #ff007f, #ff4f4f, #ff7f00, #ffaf00, #00ff15);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       color: transparent;
-      letter-spacing: 1px;
     }
 
     nav a {
-      color: #054c5a;
+      color: #ffffff;
       text-decoration: none;
       font-size: 1.1em;
-      margin: 0 1.1rem;
-      font-weight: 500;
-      position: relative;
-      transition: color 0.2s;
+      margin: 0 15px;
     }
 
-    nav a.active, nav a:hover {
-      color: #00b4d8;
-    }
-    nav a.active::after, nav a:hover::after {
-      content: "";
-      display: block;
-      width: 60%;
-      margin: 0 auto;
-      border-bottom: 2px solid #00b4d8;
-      margin-top: 2px;
-    }
-
-    .section-card {
-      border-radius: 18px;
-      box-shadow: 0 2px 18px 0 rgba(5, 26, 102, 0.08);
-      margin-bottom: 2.5rem;
-      padding: 2.5rem 2rem;
-      background: #fff;
-      transition: box-shadow 0.2s;
-    }
-
-    .section-card.info {
-      background: linear-gradient(100deg, #e9f1fa 70%, #f7fafd 100%);
-    }
-    .section-card.experience {
-      background: linear-gradient(100deg, #f6f8fb 70%, #e9f1fa 100%);
-    }
-
-    h1, h2 {
-      font-weight: 700;
-      margin-bottom: 1.2rem;
-      letter-spacing: 0.5px;
+    nav a:hover {
+      color: #00d4ff;
+      border-bottom: 2px solid #00d4ff;
     }
 
     h1 {
-      font-size: 2.1rem;
-      color: #054c5a;
       text-align: center;
-      margin-top: 110px;
-    }
-    h2 {
-      font-size: 1.4rem;
-      color: #00b4d8;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
+      margin-top: 100px;
+      margin-bottom: 30px;
     }
 
-    .personal-grid {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 1.2rem 2.5rem;
-      margin-top: 2.2rem;
-      font-size: 1.08rem;
-    }
-    .personal-label {
-      font-weight: 600;
-      color: #1abc9c;
-      letter-spacing: 0.2px;
-    }
-    .personal-value a {
-      color: #0077b6;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .personal-value a:hover {
-      color: #ff007f;
-      text-decoration: underline;
+    .personal-details {
+      background: linear-gradient(to right, #1a2a6c, #3d7eaa);
+      border-radius: 15px;
+      padding: 30px;
+      margin: 40px auto;
+      width: 85%;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
     }
 
-    .experience-list {
-      margin-top: 1.5rem;
+    .personal-details p {
+      font-size: 1.05em;
+      text-align: justify;
     }
-    .exp-org {
-      font-weight: 600;
-      color: #054c5a;
+
+    .table {
+      background-color: rgba(255, 255, 255, 0.05);
+      color: #ffffff;
+      border-radius: 10px;
+      margin-top: 20px;
+      width: 100%;
     }
-    .exp-role {
-      color: #ff7f00;
-      font-weight: 500;
-    }
-    .exp-duration {
-      color: #00b4d8;
+
+    .table th, .table td {
+      padding: 15px;
       font-size: 1em;
-      font-weight: 400;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .table th {
+      color: #ffe600;
+    }
+
+    .experience-card {
+      background: linear-gradient(to right, #144771, #1976d2);
+      color: #ffffff;
+      border-radius: 15px;
+      padding: 25px;
+      margin: 40px auto;
+      width: 85%;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .experience-card h3 {
+      font-size: 1.6em;
+      color: #00ffea;
+      margin-bottom: 10px;
+    }
+
+    .experience-card p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .hobbies-section {
+      margin: 50px auto;
+      width: 90%;
+    }
+
+    .hobby-card {
+      background: linear-gradient(135deg, #1b1f2b, #3a6ea5);
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      color: #ecf0f1;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+      margin: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .hobby-card:hover {
+      transform: scale(1.05);
+    }
+
+    .hobby-card h3 {
+      margin-top: 15px;
+      color: #1abc9c;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: #0077b6;
     }
 
     @media (max-width: 768px) {
-      .nav-name { display: none; }
-      nav a { font-size: 1em; margin: 0 0.6rem; }
-      .section-card { padding: 1.2rem 0.8rem; }
-      h1 { font-size: 1.4rem; margin-top: 80px; }
-      .personal-grid { grid-template-columns: 1fr; gap: 0.6rem 0; }
+      .nav-name {
+        display: none;
+      }
+      .personal-details, .experience-card {
+        width: 95%;
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.4em;
+      }
+      .hobby-card h3 {
+        font-size: 1.2em;
+      }
     }
   </style>
 </head>
@@ -157,51 +169,94 @@
     </div>
   </nav>
 
-  <main class="container" style="max-width: 820px;">
-    <!-- Personal Information Section -->
-    <section class="section-card info">
-      <h1>Personal Information</h1>
-      <p class="mb-3">
-        I am currently pursuing a <b>Bachelor's degree in Information Technology</b> at St. Xavier's College, Mumbai.
-        My passion lies in <b>web development</b> and <b>data analysis</b>. I enjoy exploring nature trails and thrive on hands-on learning experiences.
-      </p>
-      <div class="personal-grid">
-        <div class="personal-label">Date of Birth:</div>
-        <div class="personal-value">24-08-2004</div>
+  <div class="personal-details">
+    <h1>Personal Information</h1>
+    <p>
+      I am currently pursuing a Bachelor’s degree in Information Technology at St. Xavier's College, Mumbai.
+      My passion for web development drives me to create user-friendly websites and effectively analyze data.
+      As part of my social involvement plan, I have had the rewarding experience of working with underprivileged students,
+      fostering their growth and learning. Outside of academics, I enjoy nature trails that inspire and refresh my perspective.
+    </p>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Detail</th>
+          <th>Information</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Date of Birth:</td>
+          <td>24-08-2004</td>
+        </tr>
+        <tr>
+          <td>Languages:</td>
+          <td>English, Hindi, Marathi</td>
+        </tr>
+        <tr>
+          <td>Residential Address:</td>
+          <td>Room no 3389, Ladinaka, Ambarnath West</td>
+        </tr>
+        <tr>
+          <td>Email:</td>
+          <td><a href="mailto:aniket.singh.st1@gmail.com" class="text-info">aniket.singh.st1@gmail.com</a></td>
+        </tr>
+        <tr>
+          <td>Phone Number:</td>
+          <td><a href="tel:+9322791806" class="text-info">9322791806</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-        <div class="personal-label">Languages:</div>
-        <div class="personal-value">English, Hindi, Marathi</div>
+  <div class="experience-card">
+    <h3>Experience</h3>
+    <p><strong>Organization:</strong> Yellow Cube, Kharghar</p>
+    <p><strong>Role:</strong> Full Stack Developer</p>
+    <p><strong>Duration:</strong> May 2025 – Current</p>
+  </div>
 
-        <div class="personal-label">Residential Address:</div>
-        <div class="personal-value">Room no 3389, Ladinaka, Ambarnath West</div>
-
-        <div class="personal-label">Email:</div>
-        <div class="personal-value">
-          <a href="mailto:aniket.singh.st1@gmail.com">
-            aniket.singh.st1@gmail.com
-          </a>
-        </div>
-
-        <div class="personal-label">Phone Number:</div>
-        <div class="personal-value">
-          <a href="tel:+9322791806">9322791806</a>
+  <h1 class="text-center">My Interests and Hobbies</h1>
+  <div id="hobbiesCarousel" class="carousel slide hobbies-section" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="hobby-card">
+          <i class="fas fa-camera" style="font-size: 50px; color: #1abc9c;"></i>
+          <h3>Traveling & Photography</h3>
+          <p>I love exploring new places and capturing the beauty of the world through my camera lens.</p>
         </div>
       </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section class="section-card experience">
-      <h2><i class="fas fa-briefcase"></i> Experience</h2>
-      <div class="experience-list">
-        <div>
-          <span class="exp-org">Yellow Cube, Kharghar</span> &mdash;
-          <span class="exp-role">Full Stack Developer</span>
-          <br>
-          <span class="exp-duration">May 2025 - Current</span>
+      <div class="carousel-item">
+        <div class="hobby-card">
+          <i class="fas fa-book" style="font-size: 50px; color: #1abc9c;"></i>
+          <h3>Science Fiction Reading</h3>
+          <p>Diving into science fiction novels sparks my imagination and transports me to different worlds.</p>
         </div>
       </div>
-    </section>
-  </main>
+      <div class="carousel-item">
+        <div class="hobby-card">
+          <i class="fas fa-puzzle-piece" style="font-size: 50px; color: #1abc9c;"></i>
+          <h3>Solving Puzzles</h3>
+          <p>Challenges like puzzles enhance my problem-solving skills and keep my mind sharp.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="hobby-card">
+          <i class="fas fa-baseball-ball" style="font-size: 50px; color: #1abc9c;"></i>
+          <h3>Playing Cricket</h3>
+          <p>Engaging in cricket enhances my teamwork skills and fosters meaningful connections.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#hobbiesCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#hobbiesCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
