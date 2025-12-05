@@ -9,13 +9,15 @@
 
   <style>
     body {
-      background: linear-gradient(to right, #051a66, #054c5a, #d8e0e8);
-      color: #f8f9fa;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: radial-gradient(circle at top, #0a2a73, #012639, #00101d);
+      color: #eaf6ff;
+      font-family: 'Segoe UI', sans-serif;
+      padding-top: 110px;  /* Added spacing for navbar */
     }
 
     nav {
-      background-color: #0077b6;
+      background: rgba(0, 92, 140, 0.95);
+      backdrop-filter: blur(10px);
       padding: 15px;
       position: fixed;
       width: 100%;
@@ -24,110 +26,84 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-    }
-
-    .nav-name {
-      font-size: 1.8em;
-      font-weight: bold;
-      margin-left: 20px;
-      background: linear-gradient(135deg, #ff007f, #ff4f4f, #ff7f00, #ffaf00, #00ff15);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      color: transparent;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
     }
 
     nav a {
-      color: #ffffff;
+      color: #fff;
       text-decoration: none;
-      font-size: 1.1em;
-      margin: 0 15px;
+      font-size: 1.05em;
+      margin: 0 12px;
     }
 
-    nav a:hover, nav a.active {
-      color: #00d4ff;
-      border-bottom: 2px solid #00d4ff;
+    nav a:hover,
+    nav a.active {
+      color: #00eaff;
+      border-bottom: 2px solid #00eaff;
     }
 
-    h1 {
+    .nav-name {
+      font-size: 1.6em;
+      font-weight: bold;
+      color: #c9f7ff;
+    }
+
+    /* About Box */
+    .section-box {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+      border-radius: 18px;
+      padding: 30px;
+      margin: 20px auto;
+      width: 85%;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .section-title {
       text-align: center;
-      margin-top: 100px;
-      margin-bottom: 30px;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      color: #5edbff;
       font-weight: bold;
     }
 
-    .about-box {
-      background: linear-gradient(to right, #1a2a6c, #3d7eaa);
-      border-radius: 15px;
-      padding: 30px;
-      margin: 40px auto;
-      width: 85%;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-      text-align: justify;
-    }
-
-    .about-box h2 {
-      color: #00eaff;
-      margin-bottom: 10px;
-      text-align: center;
-    }
-
-    .experience-card {
-      background: linear-gradient(to right, #144771, #1976d2);
-      color: #ffffff;
-      border-radius: 15px;
-      padding: 25px;
-      margin: 40px auto;
-      width: 85%;
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-    }
-
-    .experience-card h3 {
-      font-size: 1.6em;
-      color: #00ffea;
-      margin-bottom: 10px;
-    }
-
-    .hobbies-section {
-      margin: 50px auto;
-      width: 90%;
-    }
-
+    /* Hobby Cards */
     .hobby-card {
-      background: linear-gradient(135deg, #1b1f2b, #3a6ea5);
+      background: rgba(0, 77, 122, 0.85);
+      padding: 22px;
       border-radius: 15px;
-      padding: 20px;
       text-align: center;
-      color: #ecf0f1;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-      margin: 10px;
-      transition: transform 0.3s ease;
+      transition: 0.3s ease-in-out;
+      height: 100%;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.4);
     }
 
     .hobby-card:hover {
-      transform: scale(1.05);
+      transform: translateY(-6px);
     }
 
     .hobby-card h3 {
-      margin-top: 15px;
-      color: #1abc9c;
+      margin-top: 12px;
+      color: #9ffcff;
     }
 
-    .carousel-control-prev-icon, .carousel-control-next-icon {
-      background-color: #0077b6;
+    .hobby-icon {
+      font-size: 48px;
+      color: #00ffe6;
     }
 
-    @media (max-width: 768px) {
+    @media(max-width: 768px) {
       .nav-name { display: none; }
-      .about-box, .experience-card {
-        width: 95%;
-        padding: 20px;
+      .section-box {
+        width: 92%;
       }
     }
   </style>
 </head>
 
 <body>
+
   <nav>
     <span class="nav-name">Aniket H. Singh</span>
     <div>
@@ -138,66 +114,65 @@
     </div>
   </nav>
 
-  <div class="about-box">
-    <h2>About Me</h2>
-    <p>
-      I am currently pursuing a Bachelor's degree in Information Technology at St. Xavier's College, Mumbai. I am passionate about web development and building user-friendly digital experiences. I also actively explore data analytics to extract useful insights and improve decision-making.
+  <!-- ABOUT -->
+  <div class="section-box">
+    <h2 class="section-title">About Me</h2>
+    <p style="text-align:justify;">
+      I am currently pursuing a Bachelor’s degree in Information Technology at St. Xavier's College, Mumbai. 
+      I love designing and developing interactive web applications that deliver real value and smooth experiences. 
+      I also enjoy working with data, discovering patterns and insights that support smarter decisions.
       <br><br>
-      I enjoy learning new technologies, staying curious, and growing my skills through real-world projects. Beyond academics, nature trails and new experiences help me refresh and stay inspired.
+      I take every opportunity to learn new technologies, experiment with ideas, and grow through hands-on projects. 
+      Outside the technical world, I enjoy exploring nature and staying curious about the world around me.
     </p>
   </div>
 
-  <div class="experience-card">
-    <h3>Experience</h3>
-    <p><strong>Organization:</strong> Yellow Cube, Kharghar</p>
-    <p><strong>Role:</strong> Full Stack Developer</p>
-    <p><strong>Duration:</strong> May 2025 – Present</p>
+  <!-- EXPERIENCE -->
+  <div class="section-box">
+    <h2 class="section-title">Experience</h2>
+    <p><strong>Full Stack Developer — Yellow Cube, Kharghar</strong></p>
+    <p>May 2025 – Present</p>
   </div>
 
-  <h1 class="text-center">Interests & Hobbies</h1>
-  <div id="hobbiesCarousel" class="carousel slide hobbies-section" data-bs-ride="carousel">
-    <div class="carousel-inner">
+  <!-- HOBBIES -->
+  <div class="section-box">
+    <h2 class="section-title">Interests & Hobbies</h2>
 
-      <div class="carousel-item active">
+    <div class="row g-4 mt-2">
+
+      <div class="col-md-3 col-sm-6">
         <div class="hobby-card">
-          <i class="fas fa-camera fa-3x"></i>
-          <h3>Traveling & Photography</h3>
-          <p>Capturing beautiful moments while exploring new places inspires me.</p>
+          <i class="fas fa-camera hobby-icon"></i>
+          <h3>Photography</h3>
+          <p>Capturing creative moments and landscapes.</p>
         </div>
       </div>
 
-      <div class="carousel-item">
+      <div class="col-md-3 col-sm-6">
         <div class="hobby-card">
-          <i class="fas fa-book fa-3x"></i>
-          <h3>Science Fiction Reading</h3>
-          <p>Imagination grows when exploring futuristic ideas and creative worlds.</p>
+          <i class="fas fa-book hobby-icon"></i>
+          <h3>Sci-Fi Reading</h3>
+          <p>Exploring futuristic stories & imagination.</p>
         </div>
       </div>
 
-      <div class="carousel-item">
+      <div class="col-md-3 col-sm-6">
         <div class="hobby-card">
-          <i class="fas fa-puzzle-piece fa-3x"></i>
+          <i class="fas fa-puzzle-piece hobby-icon"></i>
           <h3>Puzzles</h3>
-          <p>Problem-solving activities help me think smarter and faster.</p>
+          <p>Improving logic using mind-sharpening challenges.</p>
         </div>
       </div>
 
-      <div class="carousel-item">
+      <div class="col-md-3 col-sm-6">
         <div class="hobby-card">
-          <i class="fas fa-baseball-ball fa-3x"></i>
+          <i class="fas fa-baseball-ball hobby-icon"></i>
           <h3>Cricket</h3>
-          <p>Playing cricket strengthens teamwork and builds sportsmanship.</p>
+          <p>Building teamwork through sports.</p>
         </div>
       </div>
 
     </div>
-
-    <button class="carousel-control-prev" type="button" data-bs-target="#hobbiesCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#hobbiesCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
