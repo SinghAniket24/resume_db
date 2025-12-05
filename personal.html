@@ -9,31 +9,38 @@
 
   <style>
     body {
-      background: radial-gradient(circle at top, #0a2a73, #012639, #00101d);
-      color: #eaf6ff;
+      background: linear-gradient(135deg, #031634, #003d5b, #0a7fa5);
+      color: #e9f5ff;
       font-family: 'Segoe UI', sans-serif;
-      padding-top: 110px;  /* Added spacing for navbar */
+      padding-top: 130px;
     }
 
     nav {
-      background: rgba(0, 92, 140, 0.95);
+      background: rgba(0, 61, 91, 0.95);
       backdrop-filter: blur(10px);
-      padding: 15px;
+      padding: 16px 25px;
       position: fixed;
       width: 100%;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
+    }
+
+    .nav-name {
+      font-size: 1.7em;
+      font-weight: bold;
+      color: #aef3ff;
     }
 
     nav a {
-      color: #fff;
+      color: #ffffff;
       text-decoration: none;
       font-size: 1.05em;
-      margin: 0 12px;
+      margin: 0 14px;
+      padding-bottom: 4px;
     }
 
     nav a:hover,
@@ -42,68 +49,74 @@
       border-bottom: 2px solid #00eaff;
     }
 
-    .nav-name {
-      font-size: 1.6em;
-      font-weight: bold;
-      color: #c9f7ff;
-    }
-
-    /* About Box */
+    /* Universal Card Style */
     .section-box {
       background: rgba(255,255,255,0.08);
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(14px);
       border-radius: 18px;
-      padding: 30px;
-      margin: 20px auto;
+      padding: 32px;
+      margin: 30px auto;
       width: 85%;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
-      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 14px 35px rgba(0,0,0,0.35);
+      border: 1px solid rgba(255,255,255,0.15);
     }
 
     .section-title {
       text-align: center;
-      font-size: 1.8em;
-      margin-bottom: 15px;
-      color: #5edbff;
+      color: #8ff2ff;
+      font-size: 2em;
       font-weight: bold;
+      margin-bottom: 15px;
     }
 
-    /* Hobby Cards */
+    .experience-role {
+      font-size: 1.15em;
+      margin-top: 8px;
+    }
+
+    .experience-date {
+      font-size: 0.95em;
+      color: #c3efff;
+    }
+
+    /* Hobbies */
     .hobby-card {
-      background: rgba(0, 77, 122, 0.85);
-      padding: 22px;
+      background: linear-gradient(145deg, #003b55, #005a7a);
+      padding: 20px;
       border-radius: 15px;
       text-align: center;
-      transition: 0.3s ease-in-out;
+      transition: 0.4s;
       height: 100%;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.35);
     }
 
     .hobby-card:hover {
-      transform: translateY(-6px);
-    }
-
-    .hobby-card h3 {
-      margin-top: 12px;
-      color: #9ffcff;
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.45);
     }
 
     .hobby-icon {
-      font-size: 48px;
-      color: #00ffe6;
+      font-size: 50px;
+      color: #00ffee;
+      margin-bottom: 6px;
+    }
+
+    .hobby-card h3 {
+      color: #a8faff;
+      font-size: 1.25em;
+      margin-top: 10px;
     }
 
     @media(max-width: 768px) {
       .nav-name { display: none; }
-      .section-box {
-        width: 92%;
-      }
+      .section-box { width: 92%; }
     }
   </style>
 </head>
 
 <body>
 
+  <!-- NAVBAR -->
   <nav>
     <span class="nav-name">Aniket H. Singh</span>
     <div>
@@ -114,37 +127,36 @@
     </div>
   </nav>
 
-  <!-- ABOUT -->
+  <!-- ABOUT ME SECTION -->
   <div class="section-box">
     <h2 class="section-title">About Me</h2>
     <p style="text-align:justify;">
-      I am currently pursuing a Bachelor’s degree in Information Technology at St. Xavier's College, Mumbai. 
-      I love designing and developing interactive web applications that deliver real value and smooth experiences. 
-      I also enjoy working with data, discovering patterns and insights that support smarter decisions.
+      I am currently pursuing a Bachelor’s degree in Information Technology at St. Xavier's College, Mumbai.
+      I enjoy building interactive, user-friendly websites and love discovering insights through data that support smart decisions.
+      I continuously explore new technologies and enhance my skills through practical development work.
       <br><br>
-      I take every opportunity to learn new technologies, experiment with ideas, and grow through hands-on projects. 
-      Outside the technical world, I enjoy exploring nature and staying curious about the world around me.
+      When I am not coding, you’ll find me capturing moments with my camera or exploring places that bring fresh creativity into my thoughts.
     </p>
   </div>
 
-  <!-- EXPERIENCE -->
+  <!-- EXPERIENCE SECTION -->
   <div class="section-box">
     <h2 class="section-title">Experience</h2>
-    <p><strong>Full Stack Developer — Yellow Cube, Kharghar</strong></p>
-    <p>May 2025 – Present</p>
+    <p><strong>Full Stack Developer Intern — Yellow Cube, Kharghar</strong></p>
+    <p class="experience-role">Worked on system design and full-stack development to enhance digital workflows and functionality.</p>
+    <p class="experience-date">April 2025 – July 2025</p>
   </div>
 
-  <!-- HOBBIES -->
+  <!-- HOBBIES SECTION -->
   <div class="section-box">
     <h2 class="section-title">Interests & Hobbies</h2>
-
     <div class="row g-4 mt-2">
 
       <div class="col-md-3 col-sm-6">
         <div class="hobby-card">
           <i class="fas fa-camera hobby-icon"></i>
           <h3>Photography</h3>
-          <p>Capturing creative moments and landscapes.</p>
+          <p>Capturing unique scenes and creative moments.</p>
         </div>
       </div>
 
@@ -152,7 +164,7 @@
         <div class="hobby-card">
           <i class="fas fa-book hobby-icon"></i>
           <h3>Sci-Fi Reading</h3>
-          <p>Exploring futuristic stories & imagination.</p>
+          <p>Imagining future possibilities through stories.</p>
         </div>
       </div>
 
@@ -160,7 +172,7 @@
         <div class="hobby-card">
           <i class="fas fa-puzzle-piece hobby-icon"></i>
           <h3>Puzzles</h3>
-          <p>Improving logic using mind-sharpening challenges.</p>
+          <p>Enhancing mental agility with challenges.</p>
         </div>
       </div>
 
@@ -168,7 +180,7 @@
         <div class="hobby-card">
           <i class="fas fa-baseball-ball hobby-icon"></i>
           <h3>Cricket</h3>
-          <p>Building teamwork through sports.</p>
+          <p>Building team spirit through sports.</p>
         </div>
       </div>
 
