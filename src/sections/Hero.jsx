@@ -65,9 +65,9 @@ export function Hero() {
               })}
             </div>
 
-            <div className="mt-8 flex items-center gap-2.5 group cursor-default">
-              <div className="h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0 transition-shadow duration-300 group-hover:shadow-[0_0_8px_rgba(52,211,153,0.8)] group-hover:bg-emerald-400"></div>
-              <span className="text-[13px] font-medium text-slate-400 transition-colors duration-300 group-hover:text-emerald-400 tracking-wide">
+            <div className="mt-8 inline-flex items-center gap-2 group cursor-default">
+              <div className="h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0 transition-shadow duration-300 group-hover:shadow-[0_0_8px_rgba(16,185,129,0.5)]"></div>
+              <span className="text-[13px] font-medium text-emerald-500 tracking-wide">
                 Open to Full-Stack & Backend Software Engineering Opportunities
               </span>
             </div>
