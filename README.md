@@ -1,48 +1,16 @@
-# 🧑‍💻 Personal Resume Website  
-![HTML](https://img.shields.io/badge/HTML-Used-orange?logo=html5&logoColor=white&style=for-the-badge)
-![CSS](https://img.shields.io/badge/CSS-Used-blue?logo=css3&logoColor=white&style=for-the-badge)
-![JavaScript](https://img.shields.io/badge/JavaScript-Used-yellow?logo=javascript&logoColor=black&style=for-the-badge)
-![Responsive](https://img.shields.io/badge/Responsive-Design-00c2cb?style=for-the-badge&logo=responsive-design)
+# React + Vite
 
-> 🎯 A clean, responsive, and interactive personal resume website to showcase my academic journey, skills, projects, and passions in tech.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
----
+Currently, two official plugins are available:
 
-## 🌐 Live Preview
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-▶️ **Visit my resume page:**  
-🔗 [https://singhaniket24.github.io/resume_db/](https://singhaniket24.github.io/resume_db/)
+## React Compiler
 
----
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 📄 Overview
+## Expanding the Oxlint configuration
 
-This personal resume website is built using **HTML**, **CSS**, and **JavaScript**. It features:
-
-- 🏫 **Academic Background**  
-- 💻 **Technical Skills**  
-- 🚀 **Project Highlights**  
-- 🎯 **Career Objective & Hobbies**  
-- 📬 **Contact Information**
-
-The design is fully responsive and aims to reflect my **passion for web development and data analytics**. The layout is structured, easy to navigate, and optimized for different screen sizes.
-
----
-
-## 🧰 Tech Stack
-
-| Tech         | Description                            |
-|--------------|----------------------------------------|
-| 🖼️ HTML      | Structure of the resume content         |
-| 🎨 CSS       | Styling and responsive layout          |
-| ⚙️ JavaScript| Interactivity and smooth navigation    |
-
----
-
-## 📬 Contact
-
-Feel free to connect with me:
-
-**Aniket H. Singh**  
-📧 [aniket.singh.st1@gmail.com](mailto:aniket.singh.st1@gmail.com)  
-
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
