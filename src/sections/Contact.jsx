@@ -4,9 +4,8 @@ import { Section } from '@/components/ui/Section';
 import { Heading } from '@/components/ui/Heading';
 import { Button } from '@/components/ui/Button';
 import { motion } from 'framer-motion';
-import { FaPaperPlane, FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaCheckCircle } from 'react-icons/fa';
+import { FaPaperPlane, FaEnvelope, FaLinkedin, FaGithub, FaCheckCircle } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
-import { config } from '@/data/config';
 
 export function Contact() {
   const [formData, setFormData] = useState({

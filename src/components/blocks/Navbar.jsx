@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Container } from '@/components/ui/Container';
-import { config } from '@/data/config';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiMenu, FiX, FiMoon, FiSun } from 'react-icons/fi';
+import { FiMenu, FiX } from 'react-icons/fi';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isDark, setIsDark] = useState(true);
   const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {

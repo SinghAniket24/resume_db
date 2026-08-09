@@ -105,7 +105,19 @@ export function Education() {
                     {cert.name}
                   </h4>
                   
-                  <p className="text-base font-semibold text-slate-300">{cert.issuer}</p>
+                  <p className="text-base font-semibold text-slate-300 mb-1">{cert.issuer}</p>
+                  
+                  {cert.link && (
+                    <a 
+                      href={cert.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group/link inline-flex items-center gap-1 text-sm font-semibold text-sky-400 hover:text-sky-300 transition-colors duration-300"
+                    >
+                      <span>View Certificate</span>
+                      <span className="inline-block transition-transform duration-300 group-hover/link:translate-x-[2px] group-hover/link:-translate-y-[2px]">↗</span>
+                    </a>
+                  )}
                 </motion.div>
               ))}
             </div>

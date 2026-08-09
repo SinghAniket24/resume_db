@@ -3,30 +3,32 @@ export const projects = [
     id: "certinexa",
     title: "CertiNexa",
     subtitle: "Blockchain Certificate Verification System",
-    description: "A decentralized digital certificate platform where organizations issue credentials, recipients view them, and third-party verifiers confirm authenticity using tamper-proof hashing.",
+    description: "Decentralized platform where organizations issue credentials, recipients view them, and third-party verifiers confirm authenticity via tamper-proof hashing.",
     bullets: [
-      "Served as the primary backend architect on a 3-student capstone team, designing scalable REST APIs and database layers for certificate issuance, storage, and verification.",
-      "Built a SHA-256 based hashing system that verifies certificate authenticity in under 2 seconds, keeping records tamper-proof.",
-      "Designed role-based access for 3 user types — Organizations, Recipients, and Verifiers — each with distinct permissions, and coordinated with 2 teammates to build the platform on the Sepolia Ethereum testnet."
+      "Served as primary backend architect on a 3-member team, designing 12 REST API endpoints across admin, organization, recipient, and certificate modules using Node.js/Express.",
+      "Built a SHA-256-based hashing system that verifies certificate authenticity in under 2 seconds, keeping issued records tamper-proof.",
+      "Designed role-based access for 3 user types — Organizations, Recipients, and Verifiers — and coordinated smart contract deployment to the Sepolia Ethereum testnet.",
+      "Conducted Wireshark network traffic analysis and OWASP ZAP vulnerability assessment to test platform security end-to-end."
     ],
-    tech: ["MERN Stack", "Blockchain", "REST APIs", "Ethereum Testnet", "SHA-256"],
+    tech: ["MERN", "Solidity", "Hardhat"],
     github: "https://github.com/SinghAniket24/certinexa",
     live: "https://certinexa.vercel.app/",
-    image: "/projectss/certinexa.png"
+    image: "/projects/certinexa.png"
   },
   {
     id: "edustream",
     title: "EduStream",
     subtitle: "Personalized Learning Platform",
-    description: "A full-stack learning management platform that turns public YouTube videos into structured, step-by-step study blueprints with AI-generated comprehension quizzes.",
+    description: "Full-stack learning platform that turns public YouTube videos into structured study blueprints with AI-generated comprehension quizzes.",
     bullets: [
-      "Developed backend workflows in ASP.NET Core integrated with Supabase (Postgres) to manage secure data storage, user progress tracking, and quiz configurations.",
-      "Integrated the YouTube Data API to pull video content into study plans, and the Gemini API to automatically generate structured study plans and quizzes."
+      "Built robust backend workflows in ASP.NET Core (Razor Pages) with Supabase PostgreSQL to handle secure data storage, user progress tracking, and dynamic quiz configurations.",
+      "Integrated 3 third-party APIs — YouTube Data API, Gemini API, and Auth0 — to create a seamless pipeline for video ingestion, AI-generated learning content, and user authentication.",
+      "Implemented EF Core migrations for structured database schema management, ensuring reliable data handling and scalability across the platform."
     ],
-    tech: ["ASP.NET Core", "Supabase", "Postgres", "Gemini API", "YouTube Data API"],
+    tech: ["ASP.NET Core", "Supabase", "PostgreSQL", "Gemini API", "Auth0"],
     github: "https://github.com/SinghAniket24/Learning_site",
     live: null,
-    image: "/projectss/EduStream.png"
+    image: "/projects/EduStream.png"
   },
   {
     id: "socket-monitor",
@@ -41,7 +43,7 @@ export const projects = [
     tech: ["Python", "Flutter", "Sockets", "Docker"],
     github: "https://github.com/SinghAniket24/socket-based-system-monitor",
     live: null,
-    image: "/projectss/socket_app.png"
+    image: "/projects/socket_app.png"
   },
   {
     id: "event-portal",
@@ -56,6 +58,6 @@ export const projects = [
     tech: ["PHP", "MySQL", "HTML", "CSS"],
     github: "https://github.com/SinghAniket24/Event_Portal",
     live: null,
-    image: "/event_portal.png"
+    image: "/projects/event_portal.png"
   }
 ];

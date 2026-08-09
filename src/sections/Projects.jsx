@@ -14,7 +14,7 @@ export function Projects() {
       {/* Soft angular background glow */}
       <div className="absolute top-1/4 -left-1/4 w-[1000px] h-[500px] bg-gradient-to-r from-indigo-500/10 to-transparent rotate-12 blur-3xl pointer-events-none -z-10"></div>
       
-      <Container className="relative z-10">
+      <Container className="relative z-10 lg:!max-w-[90rem]">
         <div className="max-w-3xl mb-16">
           <div className="flex items-center gap-4 mb-6">
             <Heading as="h2" className="m-0">Featured Projects</Heading>
@@ -25,7 +25,7 @@ export function Projects() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 xl:gap-8">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}

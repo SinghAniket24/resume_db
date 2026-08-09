@@ -19,13 +19,21 @@ export const education = [
 
 export const certifications = [
   {
+    name: "Fundamentals of Agents",
+    issuer: "Hugging Face",
+    date: "Aug 2026",
+    link: "/certificates/huggingface-fundamentals-of-agents.png"
+  },
+  {
     name: "AWS Certified Cloud Practitioner",
     issuer: "Amazon Web Services (AWS)",
-    date: "Oct 2025"
+    date: "Oct 2025",
+    link: "/certificates/aws-certified-cloud-practitioner.jpg"
   },
   {
     name: "Complete Data Analysis Bootcamp",
     issuer: "Udemy",
-    date: "Nov 2024"
+    date: "Nov 2024",
+    link: "/certificates/complete-data-analysis-bootcamp.jpg"
   }
 ];
