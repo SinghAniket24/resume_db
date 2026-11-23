@@ -1,5 +1,21 @@
 export const projects = [
   {
+    id: "userpulse",
+    title: "UserPulse",
+    subtitle: "Real-Time User Activity Pipeline",
+    description: "Event-driven backend that processes user activity events in real time and serves persistent analytics, with built-in failure handling and full containerization.",
+    bullets: [
+      "Built a Spring Boot service that publishes user activity events to a three-partition Kafka topic and derives event counts and failed-login alerts from PostgreSQL-persisted history, so state survives restarts.",
+      "Implemented retries and dead-letter handling for failed messages, and used unique event IDs with PostgreSQL conflict handling to make processing idempotent against duplicate Kafka deliveries.",
+      "Containerized the full stack (Spring Boot app, Kafka, PostgreSQL) with Docker Compose for one-command setup.",
+      "Wrote 57 JUnit 5 tests and configured GitHub Actions CI to run the test suite on every push and pull request."
+    ],
+    tech: ["Java", "Spring Boot", "Kafka", "PostgreSQL", "Docker", "JUnit"],
+    github: "https://github.com/SinghAniket24/UserPulse",
+    live: null,
+    image: "/projects/userpulse.png"
+  },
+  {
     id: "certinexa",
     title: "CertiNexa",
     subtitle: "Blockchain Certificate Verification System",
@@ -44,20 +60,5 @@ export const projects = [
     github: "https://github.com/SinghAniket24/socket-based-system-monitor",
     live: null,
     image: "/projects/socket_app.png"
-  },
-  {
-    id: "event-portal",
-    title: "Event Portal",
-    subtitle: "Event Management & Ticketing Platform",
-    description: "A user-friendly Event Portal allowing users to browse events, register, and download tickets, complete with a secure admin panel for event and participant management.",
-    bullets: [
-      "Built a complete full-stack event platform using PHP and MySQL.",
-      "Implemented a ticket generation system for successful registrations.",
-      "Developed a secure admin panel for administrators to track and manage events and view participant details."
-    ],
-    tech: ["PHP", "MySQL", "HTML", "CSS"],
-    github: "https://github.com/SinghAniket24/Event_Portal",
-    live: null,
-    image: "/projects/event_portal.png"
   }
 ];
