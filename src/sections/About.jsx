@@ -34,7 +34,7 @@ export function About() {
               <div className="h-px w-16 bg-indigo-900/50 my-6"></div>
               
               <p className="relative z-10">
-                My experience includes developing applications using <strong className="text-white font-semibold">React</strong>, <strong className="text-white font-semibold">Node.js</strong>, <strong className="text-white font-semibold">Java with Spring Boot</strong>, and <strong className="text-white font-semibold">Python</strong>. I have worked with <strong className="text-white font-semibold">REST APIs</strong>, <strong className="text-white font-semibold">SQL</strong> and <strong className="text-white font-semibold">NoSQL</strong> databases, and modern web technologies to build efficient and responsive applications.
+                My experience includes developing applications using <strong className="text-white font-semibold">React</strong>, <strong className="text-white font-semibold">Node.js</strong>, <strong className="text-white font-semibold">Java with Spring Boot</strong>, and <strong className="text-white font-semibold">Python</strong>. I have worked with <strong className="text-white font-semibold">REST APIs</strong>, message brokers like <strong className="text-white font-semibold">Kafka</strong> and <strong className="text-white font-semibold">RabbitMQ</strong>, <strong className="text-white font-semibold">SQL</strong> and <strong className="text-white font-semibold">NoSQL</strong> databases, and modern web technologies to build efficient and responsive applications.
               </p>
 
               <p className="relative z-10">
