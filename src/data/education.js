@@ -19,6 +19,12 @@ export const education = [
 
 export const certifications = [
   {
+    name: "Data Streaming Engineer Foundations",
+    issuer: "Confluent, an IBM Company",
+    date: "Oct 2026",
+    link: "/certificates/data-streaming-engineer-foundations.pdf"
+  },
+  {
     name: "Fundamentals of Agents",
     issuer: "Hugging Face",
     date: "Aug 2026",

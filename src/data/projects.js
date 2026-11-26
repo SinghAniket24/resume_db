@@ -37,11 +37,11 @@ export const projects = [
     subtitle: "Personalized Learning Platform",
     description: "Full-stack learning platform that turns public YouTube videos into structured study blueprints with AI-generated comprehension quizzes.",
     bullets: [
-      "Built robust backend workflows with Supabase PostgreSQL to handle secure data storage, user progress tracking, and dynamic quiz configurations.",
+      "Built robust backend workflows in ASP.NET Core (Razor Pages) with Supabase PostgreSQL to handle secure data storage, user progress tracking, and dynamic quiz configurations.",
       "Integrated 3 third-party APIs — YouTube Data API, Gemini API, and Auth0 — to create a seamless pipeline for video ingestion, AI-generated learning content, and user authentication.",
-      "Implemented database migrations for structured schema management, ensuring reliable data handling and scalability across the platform."
+      "Implemented EF Core migrations for structured database schema management, ensuring reliable data handling and scalability across the platform."
     ],
-    tech: ["Supabase", "PostgreSQL", "Gemini API", "Auth0"],
+    tech: ["ASP.NET Core", "Supabase", "PostgreSQL", "Gemini API", "Auth0"],
     github: "https://github.com/SinghAniket24/Learning_site",
     live: null,
     image: "/projects/EduStream.png"
