@@ -14,7 +14,7 @@ export const skills = {
     },
     {
       name: "Core Concepts",
-      items: ["System Design", "REST APIs", "Docker", "Git", "GitHub"]
+      items: ["System Design", "REST APIs", "Docker", "Git", "GitHub", "JUnit", "GitHub Actions"]
     }
   ]
 };
